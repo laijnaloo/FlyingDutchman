@@ -5,12 +5,22 @@ h1{
     opacity: 0.8;
 }
 
+h2{
+    font-family: "Times New Roman";
+    font-size:40pt;
+    color:cadetblue;
+    opacity: 0.8;
+
+}
+
 header{
     position: absolute;
     right:30px;
 }
 
-#loginbox{
+/*  FirstPage   */
+
+#optionbox{
     position: absolute;
     top:100px;
     left:450px;
@@ -27,7 +37,6 @@ header{
     margin-right:15px;
     width:150px
 
-
 }
 
 #staff{
@@ -42,4 +51,12 @@ header{
     color:white;
     background-color: cadetblue;
     opacity: 0.5;
+}
+
+/*  LoginPage   */
+
+#loginbox{
+    position: absolute;
+    top:100px;
+    left:550px;
 }
