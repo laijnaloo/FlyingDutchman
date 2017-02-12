@@ -1,0 +1,45 @@
+h1{
+    font-family: "Times New Roman";
+    font-size: 55pt;
+    color:cadetblue;
+    opacity: 0.8;
+}
+
+header{
+    position: absolute;
+    right:30px;
+}
+
+#loginbox{
+    position: absolute;
+    top:100px;
+    left:450px;
+}
+
+#options{
+    font-family: "Times New Roman";
+    font-size: 30px;
+    color:white;
+    background-color: cadetblue;
+    opacity: 0.8;
+    float:left;
+    margin-left: 25px;
+    margin-right:15px;
+    width:150px
+
+
+}
+
+#staff{
+    position: absolute;
+    right:10px;
+    bottom: 10px;
+
+}
+#staffOption{
+    font-family: "Times New Roman";
+    font-size: 20px;
+    color:white;
+    background-color: cadetblue;
+    opacity: 0.5;
+}
