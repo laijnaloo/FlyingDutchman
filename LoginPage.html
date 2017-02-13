@@ -15,6 +15,7 @@ loginstyle.css
     <title>Login page</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="loginstyle.css">
+    <script src="scripts/site.js"></script>
 </head>
 
 <body>
@@ -34,16 +35,16 @@ one for go back and one to submit.
 <main>
     <div class="container" id="loginbox">
         <h2>Logga in </h2>
-        <input type="user" id="loginOption" name="user"  class="user" />
+        <input type="user" id="loginOption" name="user"  required placeholder="Användarnamn" class="user" />
         <br>
-        <input type="password" id="loginOption" name="pwd" " class="pwd" />
+        <input type="password" id="loginOption" name="password" required placeholder="Lösenord" class="pwd" />
 
         <center>
         <form action="FirstPage.html">
             <input type="submit" value="Tillbaka" id="choice"/>
         </form>
 
-        <form action="">
+        <form action="OrderPage.html">
             <input type="submit" value="Logga in" id="choice"/>
         </form>
     </center>
