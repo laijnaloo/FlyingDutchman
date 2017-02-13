@@ -1,3 +1,13 @@
+<!--
+File: LoginPage.html
+
+This file contains the login form for a regular customer. The user enters his/her username and password
+and then press login or presses a go back button to go back to the first page.
+
+Requires the following files:
+
+loginstyle.css
+-->
 <!DOCTYPE html>
 <html lang="sv">
 
@@ -5,10 +15,14 @@
     <title>Login page</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="loginstyle.css">
-    <script src="scripts/login.js"></script>
 </head>
 
 <body>
+<!--
+The header contains options for changing language.
+The main body has a input field for username and password. There is also two buttons,
+one for go back and one to submit.
+-->
 <header>
     <div id="language">
         <img src="images/sv.png" alt="span" title="Swedish" width="50" id="en">
@@ -20,9 +34,9 @@
 <main>
     <div class="container" id="loginbox">
         <h2>Logga in </h2>
-        <input type="email" id="loginOption" name="user"  class="email" />
+        <input type="user" id="loginOption" name="user"  class="user" />
         <br>
-        <input type="password" id="loginOption" name="pwd"      "class="pwd" />
+        <input type="password" id="loginOption" name="pwd" " class="pwd" />
 
         <center>
         <form action="FirstPage.html">
@@ -38,9 +52,8 @@
 
 </main>
 
-
-
+<!--
+END of file LoginPage.html
+-->
 </body>
-
-
 </html>

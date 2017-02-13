@@ -1,3 +1,15 @@
+<!--
+File: FirstPage.html
+
+This file contains the basic html structure for the first page. There are tree buttons to press: One to
+display the menu, one to login in as a regular customer and one to log in as a staff member. There is also
+a option to select languages.
+
+Requires the following files:
+
+loginstyle.css
+
+-->
 <!DOCTYPE html>
 <html lang="sv">
 
@@ -8,14 +20,16 @@
 </head>
 
 <body>
+<!--
+The header contains options for changing language.
+the main structure is based on three different div sections: language option,login boxes and staff button.
+-->
 <header>
     <!--Language options -->
     <div id="language">
         <img src="images/sv.png" alt="span" title="Swedish" width="50" id="en">
         <img src="images/en.png" alt="span" title="English" width="50" id="sv">
-
     </div>
-
 </header>
 
 <main>
@@ -30,7 +44,6 @@
             <form action="LoginPage.html">
                 <input type="submit" value="Logga in" id="options"/>
             </form>
-
         </center>
     </div>
 
@@ -38,13 +51,9 @@
     <div id="staff">
         <button type="button" id="staffOption" >Personal</button>
     </div>
-
-
 </main>
-
-
-
+<!--
+END of file FirstPage.html
+-->
 </body>
-
-
 </html>
