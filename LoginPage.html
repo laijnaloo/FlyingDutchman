@@ -5,6 +5,7 @@
     <title>Login page</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="loginstyle.css">
+    <script src="scripts/login.js"></script>
 </head>
 
 <body>
@@ -17,8 +18,22 @@
 </header>
 
 <main>
-    <div id="loginbox">
-        <h2>Logga in</h2>
+    <div class="container" id="loginbox">
+        <h2>Logga in </h2>
+        <input type="email" id="loginOption" name="user"  class="email" />
+        <br>
+        <input type="password" id="loginOption" name="pwd"      "class="pwd" />
+
+        <center>
+        <form action="FirstPage.html">
+            <input type="submit" value="Tillbaka" id="choice"/>
+        </form>
+
+        <form action="">
+            <input type="submit" value="Logga in" id="choice"/>
+        </form>
+    </center>
+
     </div>
 
 </main>
