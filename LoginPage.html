@@ -15,7 +15,9 @@ loginstyle.css
     <title>Login page</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="loginstyle.css">
-    <script src="db.js"></script>
+    <script src="scripts/jquery-3.1.1.js"></script>
+    <script src="scripts/language.js"></script>
+    <script src="scripts/db.js"></script>
 </head>
 
 <body>
@@ -26,27 +28,26 @@ one for go back and one to submit.
 -->
 <header>
     <div id="language">
-        <img src="images/sv.png" alt="span" title="Swedish" width="50" id="en">
-        <img src="images/en.png" alt="span" title="English" width="50" id="sv">
+
+        <input type="image" alt="span" width="50" id="sv" src="images/sv.png" />
+        <input type="image" alt="span" width="50" id= "en" src="images/en.png" />
 
     </div>
 </header>
 
 <main>
     <div class="container" id="loginbox">
-        <h2>Logga in </h2>
+        <h2><p id="logintext"></p></h2>
         <input type="user" id="loginOption" name="user"  required placeholder="Användarnamn" class="user" />
         <br>
         <input type="password" id="loginOption" name="password" required placeholder="Lösenord" class="pwd" />
 
         <center>
-        <form action="FirstPage.html">
-            <input type="submit" value="Tillbaka" id="choice"/>
-        </form>
+            <button class="choice" id="back" onclick="location.href='FirstPage.html';"></button>
 
-        <form action="OrderPage.html">
-            <input type="button" value="Logga in" id="choice" onclick="db_action()" />
-        </form>
+            <form action="OrderPage.html">
+                <input type="button" value ="OK"id="log" class="choice" onclick="db_action()" />
+            </form>
     </center>
 
     </div>

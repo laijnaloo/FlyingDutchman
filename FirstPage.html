@@ -17,10 +17,13 @@ loginstyle.css
     <title>First page</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="loginstyle.css">
-    <script src="scripts/site.js"></script>
+    <script src="scripts/jquery-3.1.1.js"></script>
+    <script src="scripts/language.js"></script>
+    <script src="scripts/js.cookie.js"></script>
+
 </head>
 
-<body>
+<body onload="checkCookie()">
 <!--
 The header contains options for changing language.
 the main structure is based on three different div sections: language option,login boxes and staff button.
@@ -28,29 +31,25 @@ the main structure is based on three different div sections: language option,log
 <header>
     <!--Language options -->
     <div id="language">
-        <img src="images/sv.png" alt="span" title="Swedish" width="50" id="en">
-        <img src="images/en.png" alt="span" title="English" width="50" id="sv">
+        <input type="image" alt="span" width="50" id="sv" src="images/sv.png" />
+        <input type="image" alt="span" width="50" id= "en" src="images/en.png" />
     </div>
 </header>
 
 <main>
+
     <!-- Login boxes -->
     <div id="optionbox">
-        <h1>Välkommen</h1>
+        <center> <h1><p id="welcome"></p> </h1></center>
         <center>
-            <form action="Sortiment.html">
-                <input type="submit" value="Sortiment" id="options"/>
-            </form>
-
-            <form action="LoginPage.html">
-                <input type="submit" value="Logga in" id="options"/>
-            </form>
+            <button class="options" id="sortiment" onclick="location.href='Sortiment.html';"></button>
+            <button class="options" id="login" onclick="location.href='LoginPage.html';"></button>
         </center>
     </div>
 
     <!-- Staff button-->
     <div id="staff">
-        <button type="button" id="staffOption" >Personal</button>
+        <button type="button" id="staffOption" ></button>
     </div>
 </main>
 <!--
