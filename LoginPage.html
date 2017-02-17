@@ -17,6 +17,7 @@ loginstyle.css
     <link rel="stylesheet" type="text/css" href="loginstyle.css">
     <script src="scripts/jquery-3.1.1.js"></script>
     <script src="scripts/language.js"></script>
+    <script src="scripts/login.js"></script>
     <script src="scripts/db.js"></script>
 </head>
 
@@ -38,16 +39,17 @@ one for go back and one to submit.
 <main>
     <div class="container" id="loginbox">
         <h2><p id="logintext"></p></h2>
-        <input type="user" id="loginOption" name="user"  required placeholder="Användarnamn" class="user" />
+        <input type="user" id="unameLoginOption" name="user"  required placeholder="Användarnamn" class="user" />
         <br>
-        <input type="password" id="loginOption" name="password" required placeholder="Lösenord" class="pwd" />
+        <input  type="password" id="passwordLoginOption" name="password" required placeholder="Lösenord" class="pwd" />
 
         <center>
             <button class="choice" id="back" onclick="location.href='FirstPage.html';"></button>
 
-            <form action="OrderPage.html">
-                <input type="button" value ="OK"id="log" class="choice" onclick="db_action()" />
-            </form>
+
+            <input type="button" value ="OK" id="loginButton" class="choice" onclick="login()"/>
+            <!--<form action="OrderPage.html">
+            </form>-->
     </center>
 
     </div>
