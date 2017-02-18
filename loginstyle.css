@@ -68,12 +68,15 @@ header{
 /* This is for the position of the login box on the LoginPage*/
 #loginbox{
     position: absolute;
-    top:100px;
-    left:550px;
-    width:500px;
+    top: 10%;
+    left: 35%;
+    width:30%;
 }
 
-/* This is for the option form to write in username and password on the LoginPage*/
+/* This is for the option form to write in username and password on the LoginPage
+
+Anna: There's no ID called loginOptition, I added the correct ones after.
+
 #loginOption{
     width: 200px;
     height: 40px;
@@ -81,17 +84,28 @@ header{
     font-size: 18px;
 
 }
+*/
+
+#passwordLoginOption, #unameLoginOption{
+    width: 12em;
+    height: 2em;
+    margin-bottom: 0.5em;
+    font-size: 30px;
+    border: none;
+    border-bottom: solid 1px;
+    border-color: gray;
+}
 
 /*This is the select buttons on the LoginPage*/
-#choice{
+.choice{
     font-family: "Times New Roman";
-    font-size: 20px;
+    font-size: 30px;
     color:white;
     background-color: cadetblue;
     opacity: 0.8;
     float:left;
-    margin-right:5px;
-    width:100px;
+    margin-right:5%;
+    width:5em;
     }
 
 /*
