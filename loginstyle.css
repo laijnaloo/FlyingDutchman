@@ -30,12 +30,12 @@ header{
 /* This is for the position of the welcome text and the two select buttons on the firstPage */
 #optionbox{
     position: absolute;
-    top:100px;
-    left: 450px;
+    top: 10%;
+    left: 35%;
 }
 
 /* This is for the select buttons on the FirstPage*/
-#options{
+.options{
     font-family: "Times New Roman";
     font-size: 30px;
     color:white;
