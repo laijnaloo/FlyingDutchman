@@ -1,11 +1,12 @@
+/* The overall style of the tabs menu */
 .tabs {
     overflow: hidden;
     border: none;
     border-bottom: 1px solid #ccc;
     background-color: white;
-
-
 }
+
+/* the style inside the tabs */
 .tabTitle{
     margin-right: 0.3em;
     background-color: #f1f1f1;
@@ -19,7 +20,7 @@
 .tabs a {
     float: left;
     display: block;
-    color: black;
+    color: cadetblue;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -35,7 +36,7 @@ CAN'T BE USED ON IPAD
     background-color: blue;
 }
 
-/* Create an active/current tablink class */
+/* active/current tablink class */
 .tabs a:focus, .active {
     background-color: white;
     border-bottom: none;
