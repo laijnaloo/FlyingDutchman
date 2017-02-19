@@ -1,0 +1,50 @@
+.tabs {
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+
+
+}
+.tabTitle{
+    margin-right: 0.3em;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom: none;
+}
+
+/* Style the links inside the tab */
+.tabs a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 35px;
+}
+
+/*
+THIS IS TEMPORARY TO BE ABLE TO SEE HOVER WHEN DEVELOPING,
+CAN'T BE USED ON IPAD
+*/
+.tabs a:hover {
+    background-color: blue;
+}
+
+/* Create an active/current tablink class */
+.tabs a:focus, .active {
+    background-color: white;
+    border-bottom: none;
+}
+
+/* Style the tab content  *********NEEDS TO BE UPDATED*********/
+.tabContent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
