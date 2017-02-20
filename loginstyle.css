@@ -35,7 +35,7 @@ header{
 }
 
 /* This is for the select buttons on the FirstPage*/
-#options{
+.options{
     font-family: "Times New Roman";
     font-size: 30px;
     color:white;
@@ -45,7 +45,6 @@ header{
     margin-left: 30px;
     width:150px;
     height: 60px;
-
 }
 
 /* This is for the position of the staff button on the firstPage*/
@@ -82,8 +81,8 @@ header{
 
 }
 
-/*This is the select buttons on the LoginPage*/
-#choice{
+
+.choice{
     font-family: "Times New Roman";
     font-size: 20px;
     color:white;
@@ -92,7 +91,8 @@ header{
     float:left;
     margin-right:5px;
     width:100px;
-    }
+}
+
 
 /*
 END of file loginstyle.css
