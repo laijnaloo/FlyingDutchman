@@ -20,53 +20,28 @@
 </header>
 
 <main>
-<!--- Anna: THIS IS SUPPOSED TO WORK, DON'T FOR SOME REASON
-Think this might be easier to style if we can get it to work
-<div class="container">
-  <h3>Tabs</h3>
-<ul class="tab-links">
-  <li class="active"><a href="#">Home</a></li>
-  <li><a href="#">Menu 1</a></li>
-  <li><a href="#">Menu 2</a></li>
-  <li><a href="#">Menu 3</a></li>
-</ul>
-</div>
----->
-
 <!--- Creates the tabs with links to content ---->
     <div class="tabs">
-		<a href="javascript:void(0)" class="tabTitle" id=startTab onclick="openTab(event, 'Beer')"> Meny </a>
-		<a href="javascript:void(0)" class="tabTitle" onclick="openTab(event, 'Cider')"> Event </a>
-		<a href="javascript:void(0)" class="tabTitle" onclick="openTab(event, 'wine')"> About </a>
-		<!--<a href="javascript:void(0)" class="tabTitle" onclick="openTab(event, 'wiskey')"> Wiskey </a>
-		<a href="javascript:void(0)" class="tabTitle" onclick="openTab(event, 'soft')"> Soft Drinks </a>--->
+		<a href="javascript:void(0)" class="tabTitle" id="Drinks" onclick="openTab(event, 'drinksTab', 'Drinks')"> Drinks </a>
+		<a href="javascript:void(0)" class="tabTitle" id="Events" onclick="openTab(event, 'eventsTab', 'Drinks')"> Events </a>
+		<a href="javascript:void(0)" class="tabTitle" id="About" onclick="openTab(event, 'aboutTab', 'Drinks')"> About </a>
 	</div>
 
 <!--- Content of tabs ---->
-	<div id='Beer' class="tabContent">
-
+	<div id='drinksTab' class="tabContent">
+	<h3>This is beer</h3>
+	<p>content for beer goes here!</p>
 	</div>
 
-	<div id='Cider' class="tabContent">
-	<h3>This is cider</h3>
+	<div id='eventsTab' class="tabContent">
+	<h3>This is events</h3>
 	<p>content for cider goes here!</p>
 	</div>
 
-	<div id='wine' class="tabContent">
-	<h3>This is wine</h3>
+	<div id='aboutTab' class="tabContent">
+	<h3>This is about</h3>
 	<p>content for wine goes here!</p>
 	</div>
-
-	<div id='wiskey' class="tabContent">
-	<h3>This is wiskey</h3>
-	<p>content for wiskey goes here!</p>
-	</div>
-
-	<div id='soft' class="tabContent">
-	<h3>This is soft drinks</h3>
-	<p>content for soft drinks goes here!</p>
-	</div>
-
 </main>
 
 
@@ -74,7 +49,7 @@ Think this might be easier to style if we can get it to work
 </body>
 	<script>
 		// Shows the content of beer when starting page
-		document.getElementById("startTab").click();
+		document.getElementById("Drinks").click();
 	</script>
 
 </html>

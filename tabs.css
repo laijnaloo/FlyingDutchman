@@ -43,6 +43,8 @@
     text-decoration: none;
     transition: 0.3s;
     font-size: 35px;
+    position: relative;
+    z-index: 10;
 }
 
 /*
