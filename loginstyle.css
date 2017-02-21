@@ -4,19 +4,27 @@ File: loginstyle.css
 This file is currently the css file for the first page and the login page.
  */
 
+/*load new font family*/
+@font-face {
+    font-family: roboto;
+    src: url(Roboto-Thin.ttf);
+}
+
+
 /* This is for when using the <h1> tag */
 h1{
-    font-family: "Times New Roman";
+    font-family: "roboto";
     font-size: 55pt;
-    color:cadetblue;
+    color: #76a3b6;
     opacity: 0.8;
+    font-weight: 100;
 }
 
 /* This is for when using the <h2> tag */
 h2{
-    font-family: "Times New Roman";
+    font-family: "roboto";
     font-size:40pt;
-    color:cadetblue;
+    color: #76a3b6;
     opacity: 0.8;
 
 }
@@ -36,10 +44,10 @@ header{
 
 /* This is for the select buttons on the FirstPage*/
 .options{
-    font-family: "Times New Roman";
+    font-family: "roboto";
     font-size: 30px;
     color:white;
-    background-color: cadetblue;
+    background-color: #76a3b6;
     opacity: 0.8;
     float:left;
     margin-left: 30px;
@@ -57,10 +65,10 @@ header{
 
 /* This is the select button for staff members on the firstPage*/
 #staffOption{
-    font-family: "Times New Roman";
+    font-family: "roboto";
     font-size: 20px;
     color:white;
-    background-color: cadetblue;
+    background-color: #76a3b6;
     opacity: 0.5;
 }
 
@@ -102,7 +110,7 @@ Anna: There's no ID called loginOptition, I added the correct ones after.
     font-family: "Times New Roman";
     font-size: 30px;
     color:white;
-    background-color: cadetblue;
+    background-color: #76a3b6;
     opacity: 0.8;
     float:left;
     margin-right:5%;
