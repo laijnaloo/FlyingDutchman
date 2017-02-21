@@ -1,26 +1,43 @@
 /* The overall style of the tabs menu */
+
+/*load new font family*/
+@font-face {
+    font-family: roboto;
+    src: url(Roboto-Thin.ttf);
+    font-weight: 100;
+}
+ p {
+    font-family: helvetica;
+     font-weight: lighter;
+ }
+
 .tabs {
+    position: relative;
     overflow: hidden;
     border: none;
-    border-bottom: 1px solid #ccc;
     background-color: white;
+    font-family: "roboto";
+    z-position: -1;
+    padding-top: 50px;
+    padding-left: 15px;
 }
 
 /* the style inside the tabs */
 .tabTitle{
     margin-right: 0.3em;
     background-color: #f1f1f1;
-    border: 1px solid #ccc;
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
     border-bottom: none;
+    box-shadow: 0 -1px 10px -1px #e1e1e1;
+
 }
 
 /* Style the links inside the tab */
 .tabs a {
     float: left;
     display: block;
-    color: cadetblue;
+    color: #76a3b6;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -44,8 +61,12 @@ CAN'T BE USED ON IPAD
 
 /* Style the tab content  *********NEEDS TO BE UPDATED*********/
 .tabContent {
+    position: relative;
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    box-shadow: 0 -10px 10px -5px #e1e1e1;
     border-top: none;
+    width: 110%;
+    margin-left: -15px;
+    z-position: 1;
 }
