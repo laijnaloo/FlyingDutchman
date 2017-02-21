@@ -35,35 +35,28 @@ header{
     right:30px;
 }
 
-.box {
-    font-family: "roboto";
-    display: inline;
-    width: 150%;
-    height: 60px;
-    background-color: #76a3b6;
-    color: white;
-    font-size: 30pt;
-    margin-left:30px;
-}
 /* This is for the position of the welcome text and the two select buttons on the firstPage */
-#optionbox{
+#optionboxes{
     position: absolute;
-    top: 10%;
+    top: 20px;
     left: 25%;
 }
 
-/* This is for the select buttons on the FirstPage*/
-.options{
+/* This is the option boxes for the first page*/
+.box {
     font-family: "roboto";
-    font-size: 30px;
-    color:white;
+    text-align:center;
+    line-height: 100px;
+    display: inline-table;
+    width: 40%;
+    height: 100px;
     background-color: #76a3b6;
+    color: white;
     opacity: 0.8;
-    float:left;
-    margin-left: 30px;
-    width:150px;
-    height: 60px;
+    font-size: 30pt;
+    margin-left:30px;
 }
+
 
 /* This is for the position of the staff button on the firstPage*/
 #staff{
@@ -87,21 +80,8 @@ header{
     position: absolute;
     top: 10%;
     left: 35%;
-    width:30%;
+    width:40%;
 }
-
-/* This is for the option form to write in username and password on the LoginPage
-
-Anna: There's no ID called loginOptition, I added the correct ones after.
-
-#loginOption{
-    width: 200px;
-    height: 40px;
-    margin-bottom: 12px;
-    font-size: 18px;
-
-}
-*/
 
 #passwordLoginOption, #unameLoginOption{
     width: 12em;
@@ -117,14 +97,17 @@ Anna: There's no ID called loginOptition, I added the correct ones after.
 /*This is the select buttons on the LoginPage*/
 
 .choice{
-    font-family: "Times New Roman";
+    font-family: "roboto";
     font-size: 30px;
     color:white;
+    display: inline;
     background-color: #76a3b6;
     opacity: 0.8;
     float:left;
-    margin-right:5%;
-    width:5em;
+    margin-right:2%;
+    width:43%;
+    height:70px;
+    line-height:60px;
     }
 
 /*
