@@ -2,11 +2,13 @@
  * Created by Anna on 2017-02-21.
  */
 
+// run init after loading content
 window.addEventListener("DOMContentLoaded", init, false);
 var inventory;
 
+// display inventory in HTML
 function display_inventories(invent){
-    var tabcontent = document.getElementById("Beer");
+    var tabcontent = document.getElementById("drinksTab");
     for (var i = 0; i < invent.length; i++){
         if(invent[i].namn != "" && invent[i].count > 0) {
             var div = document.createElement("div");
@@ -23,6 +25,7 @@ function display_inventories(invent){
     }
 }
 
+// sort the inventory list alphabetically
 function show_beverages_alphabetical(){
     var temp_inventory = sessionStorage.getItem("Inventory");
     inventory = JSON.parse(temp_inventory);
@@ -33,6 +36,7 @@ function show_beverages_alphabetical(){
     display_inventories(inventory);
 }
 
+// sort the inventory list after amount in stock
 function show_beverages_random(){
     var temp_inventory = sessionStorage.getItem("Inventory");
     inventory = JSON.parse(temp_inventory);
@@ -42,6 +46,7 @@ function show_beverages_random(){
     display_inventories(inventory);
 }
 
+// sort the inventory list after lowest price
 function show_beverages_price(){
     var temp_inventory = sessionStorage.getItem("Inventory");
     inventory = JSON.parse(temp_inventory);
@@ -52,7 +57,8 @@ function show_beverages_price(){
 
 }
 
+// run at start of page
 function init(){
-    inventory = get_beverages();
-    show_beverages_random();
+    get_beverages();
+    show_beverages_alphabetical()
 }

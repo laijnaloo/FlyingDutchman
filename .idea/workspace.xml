@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b58bf583-d416-4fea-a8be-365198f6fc4b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrderPage.html" afterPath="$PROJECT_DIR$/OrderPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sortiment.html" afterPath="$PROJECT_DIR$/Sortiment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/Sortiment.js" afterPath="$PROJECT_DIR$/scripts/Sortiment.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,17 +21,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Sortiment.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Sortiment.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sortiment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
+            <state relative-caret-position="450">
+              <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderPage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrderPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OrderPage.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
@@ -43,8 +44,8 @@
       <file leaf-file-name="Sortiment.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/Sortiment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+            <state relative-caret-position="135">
+              <caret line="10" column="55" lean-forward="false" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -128,10 +129,10 @@
         <option value="$PROJECT_DIR$/loginstyle.css" />
         <option value="$PROJECT_DIR$/Sortiment.js" />
         <option value="$PROJECT_DIR$/scripts/db.js" />
-        <option value="$PROJECT_DIR$/scripts/Sortiment.js" />
         <option value="$PROJECT_DIR$/tabs.css" />
-        <option value="$PROJECT_DIR$/Sortiment.html" />
         <option value="$PROJECT_DIR$/OrderPage.html" />
+        <option value="$PROJECT_DIR$/scripts/Sortiment.js" />
+        <option value="$PROJECT_DIR$/Sortiment.html" />
       </list>
     </option>
   </component>
@@ -232,12 +233,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487602526141</updated>
-      <workItem from="1487602535354" duration="9961000" />
+      <workItem from="1487602535354" duration="10477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9961000" />
+    <option name="totallyTimeSpent" value="10477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="838" height="1050" extended-state="0" />
@@ -312,14 +313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/Sortiment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/jquery-3.1.1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-840">
@@ -336,18 +329,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sortiment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OrderPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/Sortiment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="55" lean-forward="false" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sortiment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
           <folding />
         </state>
       </provider>
