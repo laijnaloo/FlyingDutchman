@@ -6,9 +6,21 @@
 window.addEventListener("DOMContentLoaded", init, false);
 var inventory;
 
+// clears content for sorting
+function removeCurrentContent(ID){
+    var content = document.getElementById(ID);
+    //console.log(content);
+    if (content.hasChildNodes()) {
+        for (var i = 0; i < content.childElementCount; i++) {
+            content.removeChild(content.childNodes[i]);
+        }
+    }
+}
+
 // display inventory in HTML
 function display_inventories(invent){
-    var tabcontent = document.getElementById("drinksTab");
+    var tabcontent = document.getElementById("drinksList");
+    removeCurrentContent("drinksList");
     for (var i = 0; i < invent.length; i++){
         if(invent[i].namn != "" && invent[i].count > 0) {
             var div = document.createElement("div");
@@ -29,10 +41,10 @@ function display_inventories(invent){
 function show_beverages_alphabetical(){
     var temp_inventory = sessionStorage.getItem("Inventory");
     inventory = JSON.parse(temp_inventory);
-   // console.log(inventory);
+    //console.log(inventory);
     inventory.sort(function(a, b){if( a.name > b.name)
         return a;});
-    console.log(inventory);
+    //console.log(inventory);
     display_inventories(inventory);
 }
 
@@ -42,7 +54,7 @@ function show_beverages_random(){
     inventory = JSON.parse(temp_inventory);
     // console.log(inventory);
     inventory.sort(function(a, b){return a.count - b.count});
-    console.log(inventory);
+    //console.log(inventory);
     display_inventories(inventory);
 }
 
@@ -52,7 +64,7 @@ function show_beverages_price(){
     inventory = JSON.parse(temp_inventory);
     // console.log(inventory);
     inventory.sort(function(a, b){return a.price - b.price});
-    console.log(inventory);
+    //console.log(inventory);
     display_inventories(inventory);
 
 }
