@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b58bf583-d416-4fea-a8be-365198f6fc4b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sortiment.html" afterPath="$PROJECT_DIR$/Sortiment.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/Tabcontent.js" afterPath="$PROJECT_DIR$/scripts/Tabcontent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tabs.css" afterPath="$PROJECT_DIR$/tabs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OrderPage.html" afterPath="$PROJECT_DIR$/OrderPage.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,11 +20,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Sortiment.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sortiment.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sortiment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="615">
+              <caret line="41" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderPage.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OrderPage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -124,6 +131,7 @@
         <option value="$PROJECT_DIR$/scripts/Sortiment.js" />
         <option value="$PROJECT_DIR$/tabs.css" />
         <option value="$PROJECT_DIR$/Sortiment.html" />
+        <option value="$PROJECT_DIR$/OrderPage.html" />
       </list>
     </option>
   </component>
@@ -224,12 +232,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487602526141</updated>
-      <workItem from="1487602535354" duration="9723000" />
+      <workItem from="1487602535354" duration="9961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9723000" />
+    <option name="totallyTimeSpent" value="9961000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="838" height="1050" extended-state="0" />
@@ -330,8 +338,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Sortiment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="615">
+          <caret line="41" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
