@@ -14,7 +14,7 @@ This file is currently the css file for the first page and the login page.
 /* This is for when using the <h1> tag */
 h1{
     font-family: "roboto";
-    font-size: 55pt;
+    font-size: 80pt;
     color: #76a3b6;
     opacity: 0.8;
     font-weight: 100;
@@ -35,11 +35,21 @@ header{
     right:30px;
 }
 
+.box {
+    font-family: "roboto";
+    display: inline;
+    width: 150%;
+    height: 60px;
+    background-color: #76a3b6;
+    color: white;
+    font-size: 30pt;
+    margin-left:30px;
+}
 /* This is for the position of the welcome text and the two select buttons on the firstPage */
 #optionbox{
     position: absolute;
     top: 10%;
-    left: 35%;
+    left: 25%;
 }
 
 /* This is for the select buttons on the FirstPage*/
