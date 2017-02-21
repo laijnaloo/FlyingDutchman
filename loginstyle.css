@@ -77,8 +77,8 @@ header{
 #loginbox{
     position: absolute;
     top: 10%;
-    left: 35%;
-    width:30%;
+    left: 30%;
+    width:40%;
 }
 
 /* This is for the option form to write in username and password on the LoginPage

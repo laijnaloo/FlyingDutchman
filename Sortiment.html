@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="loginstyle.css">
     <link rel="stylesheet" type="text/css" href="tabs.css">
     <script src="scripts/Tabcontent.js"></script>
+	<script src="scripts/Sortiment.js"></script>
+	<script src="scripts/db.js"></script>
 </head>
 
 <body>
@@ -33,17 +35,16 @@ Think this might be easier to style if we can get it to work
 
 <!--- Creates the tabs with links to content ---->
     <div class="tabs">
-		<a href="javascript:void(0)" class="tabTitle" id=startTab onclick="openTab(event, 'Beer')"> Beer </a>
-		<a href="javascript:void(0)" class="tabTitle" onclick="openTab(event, 'Cider')"> Cider </a>
-		<a href="javascript:void(0)" class="tabTitle" onclick="openTab(event, 'wine')"> Wine </a>
-		<a href="javascript:void(0)" class="tabTitle" onclick="openTab(event, 'wiskey')"> Wiskey </a>
-		<a href="javascript:void(0)" class="tabTitle" onclick="openTab(event, 'soft')"> Soft Drinks </a>
+		<a href="javascript:void(0)" class="tabTitle" id=startTab onclick="openTab(event, 'Beer')"> Meny </a>
+		<a href="javascript:void(0)" class="tabTitle" onclick="openTab(event, 'Cider')"> Event </a>
+		<a href="javascript:void(0)" class="tabTitle" onclick="openTab(event, 'wine')"> About </a>
+		<!--<a href="javascript:void(0)" class="tabTitle" onclick="openTab(event, 'wiskey')"> Wiskey </a>
+		<a href="javascript:void(0)" class="tabTitle" onclick="openTab(event, 'soft')"> Soft Drinks </a>--->
 	</div>
 
 <!--- Content of tabs ---->
 	<div id='Beer' class="tabContent">
-	<h3>This is beer</h3>
-	<p>content for beer goes here!</p>
+
 	</div>
 
 	<div id='Cider' class="tabContent">
