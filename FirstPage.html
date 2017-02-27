@@ -18,7 +18,7 @@ loginstyle.css
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="loginstyle.css">
     <script src="scripts/jquery-3.1.1.js"></script>
-    <script src="scripts/language.js"></script>
+    <script src="scripts/content.js"></script>
     <script src="scripts/js.cookie.js"></script>
 
 </head>
@@ -42,14 +42,14 @@ the main structure is based on three different div sections: language option,log
     <div id="optionbox">
         <center> <h1><p id="welcome"></p> </h1></center>
         <center>
-            <button class="options" id="sortiment" onclick="location.href='Sortiment.html';"></button>
-            <button class="options" id="login" onclick="location.href='LoginPage.html';"></button>
+            <a class="options" id="sortiment" onclick="location.href='Sortiment.html';"></a>
+            <a class="options" id="login" onclick="location.href='LoginPage.html';"></a>
         </center>
     </div>
 
     <!-- Staff button-->
     <div id="staff">
-        <button type="button" id="staffOption" ></button>
+        <a id="staffOption" ></a>
     </div>
 </main>
 <!--
