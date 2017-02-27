@@ -62,11 +62,12 @@ function writeData(lang) {
     getData("login",lang,"#logintext");
     getData("back",lang,"#back");
     getData("login",lang,"#loginButton");
-    setPlaceholder(lang);
+    //setPlaceholder(lang);
 
 }
 
-function setPlaceholder(lang){
+function setPlaceholder(){
+    lang = localStorage.getItem("language");
     if (lang == "en"){
         document.getElementsByName('user')[0].placeholder='Username';
         document.getElementsByName('password')[0].placeholder='Password';
