@@ -13,6 +13,7 @@ $(document).ready(function(){
         localStorage.setItem("language", "sv");
         lang = localStorage.getItem("language");
         writeData(lang);
+        setPlaceholder();
         fade(lang);
 
     });
@@ -21,7 +22,8 @@ $(document).ready(function(){
         localStorage.setItem("language", "en");
         lang = localStorage.getItem("language");
         writeData(lang);
-        fade(lang);
+        setPlaceholder();
+        fade(lang);h
     });
 });
 
@@ -62,12 +64,13 @@ function writeData(lang) {
     getData("login",lang,"#logintext");
     getData("back",lang,"#back");
     getData("login",lang,"#loginButton");
-    //setPlaceholder(lang);
+
 
 }
 
 function setPlaceholder(){
     lang = localStorage.getItem("language");
+
     if (lang == "en"){
         document.getElementsByName('user')[0].placeholder='Username';
         document.getElementsByName('password')[0].placeholder='Password';
