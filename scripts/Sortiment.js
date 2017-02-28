@@ -24,6 +24,7 @@ function display_inventories(invent){
     for (var i = 0; i < invent.length; i++){
         if(invent[i].namn != "" && invent[i].count > 0) {
             var div = document.createElement("div");
+            div.setAttribute("class", "drinks");
             var name = document.createElement("P");
             var name_text = document.createTextNode(invent[i].namn + " " + invent[i].namn2);
             var price = document.createElement("P");
