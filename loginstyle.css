@@ -114,7 +114,7 @@ header{
     }
 
 /*The position of the flags*/
-#language{
+#langOption{
     position:absolute;
     margin-top:5em;
     right: 7em;
