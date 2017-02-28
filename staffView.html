@@ -14,18 +14,23 @@
 
 <body>
 <header>
-    <div id="language">
-        <img src="images/sv.png" alt="span" title="Swedish" width="50" id="en">
-        <img src="images/en.png" alt="span" title="English" width="50" id="sv">
-    </div>
-</header>
+
+<</header>
 
 <main>
     <!--- Creates the tabs with links to content ---->
     <div class="tabs">
-        <a href="javascript:void(0)" class="tabTitle" id="Drinks" onclick="openTab(event, 'drinksTab', 'Drinks')"> Beställningar </a>
-        <a href="javascript:void(0)" class="tabTitle" id="Events" onclick="openTab(event, 'eventsTab', 'Drinks')"> Kunder </a>
-        <a href="javascript:void(0)" class="tabTitle" id="About" onclick="openTab(event, 'aboutTab', 'Drinks')"> Inställningar </a>
+        <a href="javascript:void(0)" class="tabTitle" id="orders" onclick="openTab(event, 'drinksTab', 'Drinks')"> Beställningar </a>
+        <a href="javascript:void(0)" class="tabTitle" id="customer" onclick="openTab(event, 'eventsTab', 'Drinks')"> Kunder </a>
+        <a href="javascript:void(0)" class="tabTitle" id="setting" onclick="openTab(event, 'aboutTab', 'Drinks')"> Inställningar </a>
+
+
+        <div id="language">
+            <img src="images/sv.png" alt="span" title="Swedish" width="50" id="en">
+            <img src="images/en.png" alt="span" title="English" width="50" id="sv">
+        </div>
+
+        <a class="BackToStart" id="start" onclick="location.href='FirstPage.html';" >logga ut</a>
 
     </div>
 
