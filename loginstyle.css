@@ -65,8 +65,9 @@ header{
 /* This is for the position of the staff button on the firstPage*/
 #staff{
     position: absolute;
-    right:10px;
+    right:20px;
     bottom: 10px;
+
 }
 
 /* This is the select button for staff members on the firstPage*/
