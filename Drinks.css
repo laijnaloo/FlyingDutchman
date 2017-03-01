@@ -1,0 +1,13 @@
+/**** Only the styles of the drinks item here ***/
+
+.drinks {
+    width:20%;
+    height: 23em;
+    float: left;
+    text-align: center;
+    padding: 1%;
+}
+
+.drinkPic{
+    height: 15em;
+}

@@ -1,42 +1,7 @@
-/* The overall style of the tabs menu */
+/* The overall style of the tabs menu
+SHOULD ONLY CONTAIN THE STYLING OD THE TABS MENU
 
-/*load new font family*/
-@font-face {
-    font-family: roboto;
-    src: url(Roboto-Thin.ttf);
-    font-weight: 100;
-}
- p {
-    font-family: helvetica;
-     font-weight: lighter;
- }
-
-h3{
-    font-family: "roboto";
-    font-size:30pt;
-    color: #76a3b6;
-
-}
-
-/*** HEADER ***/
-
-#language {
-    position: relative;
-    float: right;
-    top: -60px;
-}
-
-.flags {
-    width:80px;
-}
-
-#en {
-    opacity: 0.5;
-}
-
-#sv {
-    opacity: 1;
-}
+*/
 
 /******* TABS STYLE ******/
 .tabs {
@@ -74,40 +39,12 @@ h3{
     z-index: 10;
 }
 
-/*
-THIS IS TEMPORARY TO BE ABLE TO SEE HOVER WHEN DEVELOPING,
-CAN'T BE USED ON IPAD
-*/
-.tabs a:hover {
-    background-color: blue;
-}
-
 /* active/current tablink class */
 .tabs a:focus, .active {
     background-color: white;
     border-bottom: none;
 }
 
-/******** PAGE CONTENT ***********/
-
-/**** Style of drinks ****/
-.drinks {
-    width:20%;
-    height: 23em;
-    float: left;
-    text-align: center;
-    padding: 1%;
-}
-
-.drinkPic{
-    height: 15em;
-}
-
-#drinksList{
-    width: 100%;
-}
-
-/** Other page content **/
 .tabContent {
     position: relative;
     display: none;
@@ -117,85 +54,4 @@ CAN'T BE USED ON IPAD
     width: 100%;
     margin-left: -15px;
     z-position: 1;
-}
-
-.events{
-    width: 100%;
-    border-top: solid 1px lightgray;
-}
-.eventpic{
-    width: 100%;
-}
-
-
-
-.orderBox {
-    background-color: #76a3b6;
-    width: 30%;
-    height: 100vh;
-    position: fixed;
-    /*left: 70%;*/
-    right: 0;
-    top: 0;
-    background-image:url('images/dragNdrop.png');
-    background-repeat: no-repeat;
-    background-position-y: 30%;
-    background-size: 70%;
-    background-position-x: 50%;
-    color: white;
-}
-.drinks {
-
-
-}
-
-.orderContent {
-    background-color: #76a3b6;
-    width: 30%;
-    height: 100vh;
-    position: absolute;
-    top:50%;
-    color: white;
-}
-#recDrinkDiv {
-    width:40%;
-    display: block;
-    margin-left:auto;
-    margin-right: auto;
-    margin-top: 40px;
-    height: 400px;
-}
-
-#recDrink {
-    position:relative;
-    height: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
-#recText {
-    top:-20px;
-    width:45%;
-    float: right;
-}
-
-#recDrinkName {
-    position: absolute;
-    bottom: 100px;
-}
-
-#recDrinkPrice {
-    position: absolute;
-    bottom: 40px;
-    opacity: 0.5;
-}
-
-#recDrinkBuy {
-    position: absolute;
-    bottom: 0;
-    width: 150px;
-    height: 70px;
-    background-color:#76a3b6 ;
-    font-family: roboto;
-    color: white;
 }

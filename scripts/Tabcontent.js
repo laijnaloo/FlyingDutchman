@@ -33,7 +33,6 @@ function changeLanguage(language){
 		document.getElementById("sv").style.opacity = "1";
 	}
 }
-
 function countDrinks(change){
 	var counterNr = countNumber.innerHTML;
 
@@ -57,7 +56,6 @@ function countDrinks(change){
 		}
 	}
 }
-
 var loop;
 var degrees = 0;
 function rotation(idName, speed){

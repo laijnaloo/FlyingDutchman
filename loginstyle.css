@@ -4,38 +4,7 @@ File: loginstyle.css
 This file is currently the css file for the first page and the login page.
  */
 
-/*load new font family*/
-@font-face {
-    font-family: roboto;
-    src: url(Roboto-Thin.ttf);
-}
 
-
-/* This is for when using the <h1> tag */
-h1{
-    font-family: "roboto";
-    font-size: 83pt;
-    color: #76a3b6;
-    opacity: 0.8;
-    font-weight: 100;
-    text-align: center;
-}
-
-/* This is for when using the <h2> tag */
-h2{
-    font-family: "roboto";
-    font-size:60pt;
-    color: #76a3b6;
-    opacity: 0.8;
-
-
-}
-
-/* This is for when using the <header> tag*/
-header{
-    position: absolute;
-    right:30px;
-}
 
 /* This is for the position of the welcome text and the two select buttons on the firstPage */
 #optionbox{
@@ -57,9 +26,6 @@ header{
     height: 100px;
     display:block;
     line-height: 100px;
-
-
-
 }
 
 /* This is for the position of the staff button on the firstPage*/
@@ -113,12 +79,6 @@ header{
     display: block;
     }
 
-/*The position of the flags*/
-#langOption{
-    position:absolute;
-    margin-top:5em;
-    right: 7em;
-}
 
 /*The button to get back to the main menu from*/
 #start{

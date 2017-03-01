@@ -1,0 +1,58 @@
+/** Only the content of the sortiment page here**/
+/* Local width of the drinks */
+#drinksList{
+    width: 100%;
+}
+
+.events{
+    width: 100%;
+    border-top: solid 1px lightgray;
+}
+.eventpic{
+    width: 100%;
+}
+
+/**** Vet inte riktigt vad detta är för något men tror det ska vara vid sortimentet? ***/
+
+#recDrinkDiv {
+    width:40%;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 40px;
+    height: 400px;
+}
+
+#recDrink {
+    position:relative;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+#recText {
+    top:-20px;
+    width:45%;
+    float: right;
+}
+
+#recDrinkName {
+    position: absolute;
+    bottom: 100px;
+}
+
+#recDrinkPrice {
+    position: absolute;
+    bottom: 40px;
+    opacity: 0.5;
+}
+
+#recDrinkBuy {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    height: 70px;
+    background-color:#76a3b6 ;
+    font-family: roboto;
+    color: white;
+}
