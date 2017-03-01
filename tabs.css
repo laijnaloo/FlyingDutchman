@@ -18,6 +18,8 @@ h3{
 
 }
 
+/*** HEADER ***/
+
 #language {
     position: relative;
     float: right;
@@ -35,6 +37,8 @@ h3{
 #sv {
     opacity: 1;
 }
+
+/******* TABS STYLE ******/
 .tabs {
     position: relative;
     overflow: hidden;
@@ -84,7 +88,26 @@ CAN'T BE USED ON IPAD
     border-bottom: none;
 }
 
-/* Style the tab content  *********NEEDS TO BE UPDATED*********/
+/******** PAGE CONTENT ***********/
+
+/**** Style of drinks ****/
+.drinks {
+    width:20%;
+    height: 23em;
+    float: left;
+    text-align: center;
+    padding: 1%;
+}
+
+.drinkPic{
+    height: 15em;
+}
+
+#drinksList{
+    width: 100%;
+}
+
+/** Other page content **/
 .tabContent {
     position: relative;
     display: none;
@@ -94,6 +117,14 @@ CAN'T BE USED ON IPAD
     width: 100%;
     margin-left: -15px;
     z-position: 1;
+}
+
+.events{
+    width: 100%;
+    border-top: solid 1px lightgray;
+}
+.eventpic{
+    width: 100%;
 }
 
 .orderBox {
@@ -110,10 +141,6 @@ CAN'T BE USED ON IPAD
     background-size: 70%;
     background-position-x: 50%;
     color: white;
-}
-.drinks {
-
-
 }
 
 .orderContent {
