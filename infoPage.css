@@ -1,6 +1,7 @@
 /* The overall style of the tabs menu */
 
 /*load new font family*/
+
 @font-face {
     font-family: roboto;
     src: url(Roboto-Thin.ttf);
@@ -187,3 +188,17 @@ h3{
     transform: rotate(180deg);
 }
 
+button {
+    border: none;
+}
+
+#logoutButton {
+    width: 10%;
+    height: 2.5em;
+    background-color:#76a3b6 ;
+    float: right;
+    color: white;
+    font-family: 'roboto';
+    font-size: 1.5em;
+    margin-left: 5%;
+}
