@@ -6,12 +6,16 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="loginstyle.css">
     <link rel="stylesheet" type="text/css" href="tabs.css">
+
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="scripts/Tabcontent.js"></script>
     <script src="scripts/Sortiment.js"></script>
     <script src="scripts/db.js"></script>
     <script src="scripts/DragAndDrop.js"></script>
-    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="scripts/orderBoxScroll.js"></script>
+
+
 </head>
 
 <body>
@@ -24,7 +28,7 @@
 
 <main>
     <!--- Creates the tabs with links to content ---->
-    <div class="tabs">
+    <div class="tabs" id="tabs">
         <a href="javascript:void(0)" class="tabTitle" id="Drinks" onclick="openTab(event, 'drinksTab', 'Drinks')"> Drinks </a>
         <a href="javascript:void(0)" class="tabTitle" id="Events" onclick="openTab(event, 'eventsTab', 'Drinks')"> Events </a>
         <a href="javascript:void(0)" class="tabTitle" id="About" onclick="openTab(event, 'aboutTab', 'Drinks')"> About </a>
@@ -43,6 +47,7 @@
         <div id='orderBox' class="orderBox">
             <h3 style="color:white;" align="center">Din order</h3>
             <div id="orderContent" class="orderContent">
+
 
             </div>
         </div>
