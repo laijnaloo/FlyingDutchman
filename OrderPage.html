@@ -9,6 +9,9 @@
     <script src="scripts/Tabcontent.js"></script>
     <script src="scripts/Sortiment.js"></script>
     <script src="scripts/db.js"></script>
+    <script src="scripts/DragAndDrop.js"></script>
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -29,8 +32,20 @@
 
     <!--- Content of tabs ---->
     <div id='drinksTab' class="tabContent">
-        <h3>This is beer</h3>
-        <p>content for beer goes here!</p>
+        <div id="sortButtons">
+            <input type="button" value="A-Ö" id="alph" onclick="show_beverages_alphabetical()">
+            <input type="button" value="Price" id="price" onclick="show_beverages_price()">
+            <input type="button" value="Popularity" id="pop" onclick="show_beverages_random()">
+        </div>
+        <div id="drinksList" class="drinks">
+
+        </div>
+        <div id='orderBox' class="orderBox">
+            <h3 style="color:white;" align="center">Din order</h3>
+            <div id="orderContent" class="orderContent">
+
+            </div>
+        </div>
     </div>
 
     <div id='eventsTab' class="tabContent">

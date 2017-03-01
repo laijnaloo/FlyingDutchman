@@ -1,1 +1,1 @@
-welcome-string,Välkommen,Welcome;sort,Sortiment,Collection;login,Logga in,Login;staff,Personal,Staff;back,Tillbaka,Back;user,Användarnamn,Username;pwd,Lösenord,Password;
+welcome-string,Välkommen,Welcome;sort,Sortiment,Collection;login,Logga in,Login;staff,Personal,Staff;back,Tillbaka,Back;user,Användarnamn,Username;pwd,Lösenord,Password;stafflogin,Personal, Staff;

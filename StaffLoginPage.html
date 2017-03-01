@@ -1,0 +1,62 @@
+<!--
+File: StaffLoginPage.html
+
+This file contains the login form for a regular customer. The user enters his/her username and password
+and then press login or presses a go back button to go back to the first page.
+
+Requires the following files:
+
+loginstyle.css
+-->
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <title>Login page</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="loginstyle.css">
+    <script src="scripts/jquery-3.1.1.js"></script>
+    <script src="scripts/content.js"></script>
+    <script src="scripts/staffLogin.js"></script>
+    <script src="scripts/db.js"></script>
+</head>
+
+<body onload="setPlaceholder()">
+<!--
+The header contains options for changing language.
+The main body has a input field for username and password. There is also two buttons,
+one for go back and one to submit.
+-->
+<header>
+    <div id="language">
+
+        <input type="image" alt="span" width="50" id="sv" src="images/sv.png" />
+        <input type="image" alt="span" width="50" id= "en" src="images/en.png" />
+
+    </div>
+</header>
+
+<main>
+    <div class="container" id="loginbox">
+        <h2 id="staffLogintext"></h2>
+        <input type="user" id="unameLoginOption" name="user" class="user" />
+        <br>
+        <input  type="password" id="passwordLoginOption" name="password" class="pwd" />
+
+        <center>
+            <a class="choice" id="back" onclick="location.href='FirstPage.html';"></a>
+            <a class="choice" id="loginButton" onclick="login()"></a>
+
+            <!--<form action="OrderPage.html">
+            </form>-->
+    </center>
+
+    </div>
+
+</main>
+
+<!--
+END of file LoginPage.html
+-->
+</body>
+</html>

@@ -17,22 +17,56 @@ function removeCurrentContent(ID){
     }
 }
 
+function randomImg(){
+    var images = ["images/Beer.png", "images/cider.png"];
+    var randomNumber = Math.random() * 10;
+    if (randomNumber<5){
+        return images[0];
+    }
+    else{
+        return images[1];
+    }
+}
+
+function insertImage(divID){
+    var source = randomImg();
+    var img = document.createElement("IMG");
+    img.setAttribute("class", "drinkPic");
+    img.src = source;
+    divID.appendChild(img);
+}
+
+function createBeverageName(divID, inventory, i){
+    var name = document.createElement("P");
+    name.setAttribute("class", "namePara");
+    var name_text = document.createTextNode(inventory[i].namn + " " + inventory[i].namn2);
+    name.appendChild(name_text);
+    divID.appendChild(name);
+}
+
+function createBeveragePrice(divID, inventory, i) {
+    var price = document.createElement("P");
+    price.setAttribute("class", "pricePara");
+    var price_text = document.createTextNode(inventory[i].price);
+    price.appendChild(price_text);
+    divID.appendChild(price);
+}
+
 // display inventory in HTML
-function display_inventories(invent){
+function display_inventories(inventory){
     var tabcontent = document.getElementById("drinksList");
     removeCurrentContent("drinksList");
-    for (var i = 0; i < invent.length; i++){
-        if(invent[i].namn != "" && invent[i].count > 0) {
+    for (var i = 0; i < inventory.length; i++){
+        if(inventory[i].namn != "" && inventory[i].count > 0) {
             var div = document.createElement("div");
-            var name = document.createElement("P");
-            var name_text = document.createTextNode(invent[i].namn + " " + invent[i].namn2);
-            var price = document.createElement("P");
-            var price_text = document.createTextNode(invent[i].price);
-            name.appendChild(name_text);
-            price.appendChild(price_text);
-            div.appendChild(name);
-            div.appendChild(price);
+            div.setAttribute("class", "drinks");
+
+            insertImage(div);
+            createBeverageName(div, inventory, i);
+            createBeveragePrice(div, inventory, i);
+
             tabcontent.appendChild(div);
+            console.log(name);
         }
     }
 }

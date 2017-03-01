@@ -96,6 +96,51 @@ CAN'T BE USED ON IPAD
     z-position: 1;
 }
 
+.orderBox {
+    background-color: #76a3b6;
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    /*left: 70%;*/
+    right: 0;
+    top: 0;
+    background-image:url('images/dragNdrop.png');
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    background-size: 70%;
+    background-position-x: 50%;
+    color: white;
+}
+
+.drinks {
+    width:30%;
+    height: 23em;
+    float: left;
+    text-align: center;
+    padding: 1%;
+}
+
+.drinkPic{
+    height: 15em;
+}
+
+.namePara, .pricePara{
+    margin-bottom: auto;
+    padding-bottom: inherit;
+}
+
+#drinksList{
+    width: 65%;
+}
+
+.orderContent {
+    background-color: #76a3b6;
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    top:50%;
+    color: white;
+}
 #recDrinkDiv {
     width:40%;
     display: block;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <title>The flying Dutchman</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="loginstyle.css">
+    <link rel="stylesheet" type="text/css" href="tabs.css">
+    <script src="scripts/Tabcontent.js"></script>
+    <script src="scripts/Sortiment.js"></script>
+    <script src="scripts/db.js"></script>
+    <script src="scripts/content.js"></script>
+</head>
+
+<body>
+<header>
+
+<</header>
+
+<main>
+    <!--- Creates the tabs with links to content ---->
+    <div class="tabs">
+        <a href="javascript:void(0)" class="tabTitle" id="orders" onclick="openTab(event, 'drinksTab', 'Drinks')"> Beställningar </a>
+        <a href="javascript:void(0)" class="tabTitle" id="customer" onclick="openTab(event, 'eventsTab', 'Drinks')"> Kunder </a>
+        <a href="javascript:void(0)" class="tabTitle" id="setting" onclick="openTab(event, 'aboutTab', 'Drinks')"> Inställningar </a>
+
+
+        <div id="langOption">
+            <img src="images/sv.png" alt="span" title="Swedish" width="50" id="en">
+            <img src="images/en.png" alt="span" title="English" width="50" id="sv">
+        </div>
+
+        <a class="BackToStart" id="start" onclick="location.href='FirstPage.html';" >logga ut</a>
+
+    </div>
+
+    <!--- Content of tabs ---->
+    <div id='drinksTab' class="tabContent">
+
+    </div>
+
+    <div id='eventsTab' class="tabContent">
+
+    </div>
+
+    <div id='aboutTab' class="tabContent">
+
+    </div>
+</main>
+
+
+
+</body>
+<script>
+    // Shows the content of beer when starting page
+    document.getElementById("Drinks").click();
+</script>
+
+</html>

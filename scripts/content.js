@@ -64,6 +64,8 @@ function writeData(lang) {
     getData("login",lang,"#logintext");
     getData("back",lang,"#back");
     getData("login",lang,"#loginButton");
+    getData("stafflogin",lang,"#staffLogintext");
+
 
 
 }
