@@ -13,13 +13,19 @@
 
 <body>
 <header>
-    <div id="language">
-        <img src="images/sv.png" alt="span" title="Swedish" width="50" id="en">
-        <img src="images/en.png" alt="span" title="English" width="50" id="sv">
-    </div>
+	<span>
+
+	<div id="language">
+		<img src="images/sv.png" alt="span" title="Swedish" width="50" id="en">
+		<img src="images/en.png" alt="span" title="English" width="50" id="sv">
+	</div>
+	</span>
 </header>
 
 <main>
+	<div id="back">
+		<input type="button" value="Back" id="backButton" onclick="location.href='FirstPage.html';">
+	</div>
 <!--- Creates the tabs with links to content ---->
     <div class="tabs">
 		<a href="javascript:void(0)" class="tabTitle" id="Drinks" onclick="openTab(event, 'drinksTab', 'Drinks')"> Drinks </a>
@@ -40,9 +46,32 @@
 	</div>
 
 	<div id='eventsTab' class="tabContent">
-	<h3>This is events</h3>
-	<p>content for cider goes here!</p>
-	</div>
+	<h2>Upcomming events</h2>
+        <div class="events">
+            <h3>The singning farmers</h3>
+            <img class="eventpic" src="images/eventpic.JPG">
+            <p class="eventDescription">
+                On Sunday the 3rd of March the local band singning farmers will join us here in the flying dutchman and play us some songs.
+                The bar will be open as usual between 10pm and 2am. The band will be playing 11pm to 12pm.
+            </p>
+        </div>
+		<div class="events">
+            <h3>Beer tasting at the flying dutchman!</h3>
+			<img class="eventpic" src="images/eventpic2_beer.jpg">
+			<p class="eventDesciption">Friday 4th of April we'll have a beer tasting here at the flying dutchman.
+				To join it's necessary t sign up. In case of interest, talk to a bartender!
+				The price will be 350SEK for thew entire evening. The bar will be open as usual for other cutomers.
+			</p>
+		</div>
+		<div class="events">
+			<h3>Girls Night</h3>
+			<img class="eventpic" src="images/eventpic3_ladies.jpg">
+			<p class="eventDesciption">
+				Girls night out is comming to the flying dutchman! The 10th of May will be a ladies-only night. Classic music, pink drinks and a suprise band will show up this evening.
+				No men allowed!
+			</p>
+		</div>
+
 
 	<div id='aboutTab' class="tabContent">
 	<h3>This is about</h3>
