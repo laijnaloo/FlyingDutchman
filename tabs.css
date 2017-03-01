@@ -111,9 +111,26 @@ CAN'T BE USED ON IPAD
     background-position-x: 50%;
     color: white;
 }
+
 .drinks {
+    width:30%;
+    height: 23em;
+    float: left;
+    text-align: center;
+    padding: 1%;
+}
 
+.drinkPic{
+    height: 15em;
+}
 
+.namePara, .pricePara{
+    margin-bottom: auto;
+    padding-bottom: inherit;
+}
+
+#drinksList{
+    width: 65%;
 }
 
 .orderContent {
