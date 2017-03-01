@@ -127,11 +127,13 @@ CAN'T BE USED ON IPAD
     width: 100%;
 }
 
+
+
 .orderBox {
     background-color: #76a3b6;
-    width: 300px;
-    height: 500px;
-    position: absolute;
+    width: 30%;
+    height: 100vh;
+    position: fixed;
     /*left: 70%;*/
     right: 0;
     top: 0;
@@ -142,11 +144,15 @@ CAN'T BE USED ON IPAD
     background-position-x: 50%;
     color: white;
 }
+.drinks {
+
+
+}
 
 .orderContent {
     background-color: #76a3b6;
-    width: 300px;
-    height: 250px;
+    width: 30%;
+    height: 100vh;
     position: absolute;
     top:50%;
     color: white;

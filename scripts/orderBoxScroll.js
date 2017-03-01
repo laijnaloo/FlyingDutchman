@@ -8,13 +8,11 @@ $(document).ready(function(){
     margin = parseInt(margin, 10);
     headerHeight=headerHeight+margin;
     console.log(margin);
-
     document.getElementById('orderBox').style.top = headerHeight+"px";
-
     $(window).scroll(function(){
         var scrollDistance = $(document).scrollTop();
         if(scrollDistance > headerHeight) {
-            document.getElementById('orderBox').style.top = "2px";
+            document.getElementById('orderBox').style.top = "0px";
 
         } else {
 
