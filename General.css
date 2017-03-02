@@ -29,6 +29,18 @@ h3{
     color: #76a3b6;
 }
 
+h4{
+    font-family: "roboto";
+    font-size:1.5em;
+    color: #76a3b6;
+
+}
+
+p{
+    color: #76a3b6;
+    font-family: Helvetica;
+}
+
 /* This is for when using the <header> tag*/
 header{
     position: absolute;
@@ -60,4 +72,8 @@ header{
 
 #sv {
     opacity: 1;
+}
+
+.pageHeader{
+    text-align: center;
 }
