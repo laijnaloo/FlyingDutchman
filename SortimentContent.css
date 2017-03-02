@@ -52,7 +52,23 @@
     bottom: 0;
     width: 150px;
     height: 70px;
-    background-color:#76a3b6 ;
-    font-family: roboto;
-    color: white;
+}
+
+#sortButtons{
+    width: 30%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.sortButtons{
+    width: 28%;
+    height: 5vh;
+    margin-bottom: 8%;
+    font-size: 1.3em;
+}
+
+.rightButtons {
+    margin-left: 7%;
 }
