@@ -74,6 +74,25 @@ header{
     opacity: 1;
 }
 
+#logoutButton {
+    width: 10%;
+    height: 2.5em;
+    float: right;
+    font-size: 1.5em;
+    margin-left: 5%;
+}
+
 .pageHeader{
     text-align: center;
+}
+
+button, input {
+    background-color:#76a3b6 ;
+    border: none;
+    color: white;
+    font-family: 'roboto';
+}
+
+a {
+    text-decoration: None;
 }

@@ -1,4 +1,8 @@
 
+
+/* Style for the recommended drink and the page where it is possible to view more information about each drink */
+
+/*Arrow*/
 #leftArrow {
     float: left;
     width: 5%;
@@ -7,24 +11,30 @@
     left: 70px;
 }
 
+/* animation style for arrow*/
+.rotate {
+    transform: rotate(180deg);
+}
+
+
 #recDrinkDiv {
     width:40%;
     display: block;
     padding-top:40px;
     margin-left:auto;
     margin-right: auto;
-    height: 400px;
+    height: 50vh;
 }
 
 #recDrink {
     position:relative;
-    height: 400px;
+    height: 50vh;
 }
 
 #recText {
     top:-1.5em;
     width:55%;
-    height: 100%;
+    height: 50vh;
     float: right;
     position:relative;
 }
@@ -43,7 +53,6 @@
 #recDrinkBuy {
     width: 80%;
     height: 20%;
-    background-color:#76a3b6 ;
     position:absolute;
     bottom:0%;
 }
@@ -94,21 +103,3 @@
     text-align: center;
 }
 
-.rotate {
-    transform: rotate(180deg);
-}
-
-button {
-    border: none;
-}
-
-#logoutButton {
-    width: 10%;
-    height: 2.5em;
-    background-color:#76a3b6 ;
-    float: right;
-    color: white;
-    font-family: 'roboto';
-    font-size: 1.5em;
-    margin-left: 5%;
-}
