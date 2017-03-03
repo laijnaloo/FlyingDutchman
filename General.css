@@ -91,6 +91,7 @@ button, input {
     border: none;
     color: white;
     font-family: 'roboto';
+    font-size: 13pt;
 }
 
 a {

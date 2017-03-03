@@ -26,3 +26,9 @@
     top:50%;
     color: white;
 }
+
+.unredo {
+    border: solid 1px;
+    border-color: #ffffff;
+    margin: 1%;
+}
