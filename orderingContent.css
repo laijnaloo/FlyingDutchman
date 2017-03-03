@@ -27,16 +27,41 @@
     color: white;
 }
 
+.orderPrice {
+    background-color: #76a3b6;
+    width: 50%;
+    top: 0px;
+    float: left;
+    height: 100vh;
+}
+.orderName {
+    background-color: #76a3b6;
+    width: 50%;
+    top: 0px;
+    float: left;
+    height: 100vh;
+}
+
 .unredo {
     border: solid 1px;
     border-color: #ffffff;
     margin: 1%;
 }
 
-.orderContent p {
+.orderPrice p {
+    color: white;
+    right: 0;
+    width: 100%;
+    margin: 0 1%;
+    height: 5%;
+
+}
+
+.orderName p {
+    height: 5%;
     color: white;
     float: left;
-    width: 40%;
+    width: 100%;
     margin: 0 1%;
 
 }
