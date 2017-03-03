@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", init, false);
 function init(){
     order = JSON.parse(localStorage.getItem("order"));
     cursor = localStorage.getItem("undoCursor");
-    if(order.length == 0) {
+    if(order == null) {
         order = [];
         cursor = 0;
     }
