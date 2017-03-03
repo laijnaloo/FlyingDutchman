@@ -55,20 +55,19 @@
 }
 
 #sortButtons{
-    width: 30%;
+    width: 80%;
     display: block;
     margin-right: auto;
     margin-left: auto;
-
 }
 
 .sortButtons{
     width: 28%;
-    height: 5vh;
+    height: 2em;
     margin-bottom: 8%;
     font-size: 1.3em;
 }
 
 .rightButtons {
-    margin-left: 7%;
+    margin-left: 5%;
 }
