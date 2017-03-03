@@ -16,6 +16,7 @@
     <script src="scripts/db.js"></script>
     <script src="scripts/DragAndDrop.js"></script>
     <script src="scripts/orderBoxScroll.js"></script>
+    <script src="scripts/undo.js"></script>
 
 
 </head>
@@ -47,6 +48,8 @@
 
         </div>
         <div id='orderBox' class="orderBox">
+            <input type="button" value="undo" id="undo" class="unredo" onclick="undo()">
+            <input type="button" value="redo" id="redo" class="unredo" onclick="redo()">
             <h3 style="color:white;" align="center">Din order</h3>
             <div id="orderContent" class="orderContent">
 
