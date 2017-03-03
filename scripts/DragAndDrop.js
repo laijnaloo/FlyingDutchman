@@ -1,12 +1,5 @@
 
 
-$(document).ready(function(){
-
-
-
-
-
-});
 
 
 function setDraggable() {
@@ -23,7 +16,7 @@ function setDraggable() {
         activeClass: "ui-state-default",
         hoverClass: "ui-state-hover",
         drop: function(event, ui) {
-            $(document.getElementById("orderBox")).append($(ui.draggable.getElementsByTagName('p')[0].innerHTML));
+            $(document.getElementById("orderContent")).append($(ui.draggable.find('p')).clone());
         }
     });
 
