@@ -50,8 +50,8 @@
 
 .orderPrice p {
     color: white;
-    right: 0;
-    width: 100%;
+    text-align: right;
+    width: 60%;
     margin: 0 1%;
     height: 5%;
 
@@ -60,7 +60,7 @@
 .orderName p {
     height: 5%;
     color: white;
-    float: left;
+    text-align: center;
     width: 100%;
     margin: 0 1%;
 
