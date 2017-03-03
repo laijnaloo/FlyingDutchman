@@ -1,6 +1,15 @@
 
 
 $(document).ready(function(){
+
+
+
+
+
+});
+
+
+function setDraggable() {
     $(".drinks").draggable({
         appendTo: "body",
         cursor: "move",
@@ -8,18 +17,14 @@ $(document).ready(function(){
         revert: "invalid"
     });
 
-    $("#orderContent").droppable({
+    $("#orderBox").droppable({
         tolerance: "intersect",
         accept: ".drinks",
         activeClass: "ui-state-default",
         hoverClass: "ui-state-hover",
         drop: function(event, ui) {
-            $(this).append($(ui.draggable));
+            $(document.getElementById("orderBox")).append($(ui.draggable.getElementsByTagName('p')[0].innerHTML));
         }
     });
 
-
-
-});
-
-
+}

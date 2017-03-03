@@ -69,6 +69,7 @@ function display_inventories(inventory){
             console.log(name);
         }
     }
+    setDraggable();
 }
 
 // sort the inventory list alphabetically
