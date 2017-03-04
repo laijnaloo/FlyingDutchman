@@ -107,5 +107,5 @@ function show_beverages_price(){
 // run at start of page
 function init(){
     get_beverages();
-    show_beverages_alphabetical()
+    show_beverages_alphabetical();
 }

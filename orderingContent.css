@@ -5,14 +5,14 @@
 .orderBox {
     background-color: #76a3b6;
     width: 30%;
-    height: 100vh;
+    height: 95vh;
     position: fixed;
     /*left: 70%;*/
     right: 0;
     top: 0;
     background-image:url('images/dragNdrop.png');
     background-repeat: no-repeat;
-    background-position-y: 30%;
+    background-position-y: 25%;
     background-size: 70%;
     background-position-x: 50%;
     color: white;
@@ -21,9 +21,9 @@
 .orderContent {
     background-color: #76a3b6;
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     position: absolute;
-    top:50%;
+    top:45%;
     color: white;
 }
 
@@ -32,14 +32,21 @@
     width: 50%;
     top: 0px;
     float: left;
-    height: 100vh;
+    height: 95vh;
 }
 .orderName {
     background-color: #76a3b6;
     width: 50%;
     top: 0px;
     float: left;
-    height: 100vh;
+    height: 95vh;
+}
+.Payment {
+    background-color: #76a3b6;
+    width: 100%;
+    top: 80%;
+    height: 95vh;
+    position: absolute;
 }
 
 .unredo {
