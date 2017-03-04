@@ -56,6 +56,7 @@ function countDrinks(change){
 		}
 	}
 }
+
 var loop;
 var degrees = 0;
 function rotation(idName, speed){

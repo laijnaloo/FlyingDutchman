@@ -24,7 +24,6 @@
 }
 
 #recDrink {
-    position:relative;
     height: 100%;
     position: absolute;
     bottom: 0;
@@ -36,14 +35,15 @@
     float: right;
 }
 
-#recDrinkName {
+#recDrinkNameSortiment {
     position: absolute;
-    bottom: 100px;
+    bottom: 5%;
 }
 
-#recDrinkPrice {
+#recDrinkPriceSortiment {
     position: absolute;
-    bottom: 40px;
+    bottom: 0px;
+    margin: 0;
     opacity: 0.5;
 }
 
@@ -70,4 +70,12 @@
 
 .rightButtons {
     margin-left: 5%;
+}
+
+#infoPage{
+    display: none;
+}
+
+#inventoryPage{
+    display:block;
 }
