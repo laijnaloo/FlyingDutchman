@@ -1,5 +1,5 @@
 /**
- * Created by Anna on 2017-02-21.
+ * Created by Lina Andersson on 2017-03-04.
  */
 
 // run init after loading content
@@ -59,6 +59,14 @@ function createBeveragePrice(divID, inventory, i) {
     return inventory[i].price;
 }
 
+//creates a buy button below all the drinks on the order page
+function createBuyButton(div){
+    var buyButton = document.createElement("BUTTON");
+    buyButton.setAttribute("class", "orderButton");
+    buyButton.innerHTML = "Place Order"
+    div.appendChild(buyButton);
+}
+
 //
 function closure(func, image, name, price) {
     return function() {
@@ -66,7 +74,7 @@ function closure(func, image, name, price) {
     }
 }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  // display inventory in HTML
+// display inventory in HTML
 function display_inventories(inventory){
     var tabcontent = document.getElementById("drinksList");
 
@@ -86,6 +94,7 @@ function display_inventories(inventory){
             var image = insertImage(div);
             var name = createBeverageName(div, inventory, i);
             var price = createBeveragePrice(div, inventory, i);
+            createBuyButton(div);
 
             //onclick a page with information about the drink appears
             //div.setAttribute("onclick", "showDrinkInfo()");

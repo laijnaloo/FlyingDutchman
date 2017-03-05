@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.drinks{
+    margin-left:1%;
+}
+
 .events{
     width: 100%;
     border-top: solid 1px lightgray;
@@ -77,5 +81,10 @@
 }
 
 #inventoryPage{
+    position:relative;
     display:block;
+    margin-right: auto;
+    margin-left: auto;
+
 }
+

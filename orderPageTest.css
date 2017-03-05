@@ -1,0 +1,73 @@
+#drinksList{
+    width: 65%;
+}
+
+.drinks{
+    margin-left:2%;
+    height: 30em;
+    position: relative;
+}
+
+.orderBox {
+    background-color: #76a3b6;
+    width: 30%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+#dragNdrop{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.orderContent {
+    background-color: #76a3b6;
+    width: 30%;
+    height: 100vh;
+    position: absolute;
+    top:50%;
+    color: white;
+    margin-top:-35vh;
+    width:100%;
+
+}
+
+#sortButtonOrder{
+    width: 65%;
+    display: block;
+    margin-right: auto;
+    margin-left: 7%;
+}
+
+.sortButtonOrder{
+    width:25%;
+    height: 2em;
+    margin-bottom: 8%;
+    font-size: 1.3em;
+}
+
+.orderButton {
+    height: 4em;
+    width: 50%;
+    font-size:1em;
+    position: absolute;
+    bottom: 13%;
+    left: 25%;
+    right: 25%;
+}
+
+.pricePara{
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+    right: 25%;
+}
+
+#orderHeader{
+    text-align: center;
+    color: white;
+}

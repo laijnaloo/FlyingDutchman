@@ -10,13 +10,8 @@
     /*left: 70%;*/
     right: 0;
     top: 0;
-    background-image:url('images/dragNdrop.png');
-    background-repeat: no-repeat;
-    background-position-y: 30%;
-    background-size: 70%;
-    background-position-x: 50%;
-    color: white;
 }
+
 
 .orderContent {
     background-color: #76a3b6;

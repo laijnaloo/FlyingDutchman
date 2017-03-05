@@ -57,11 +57,11 @@ header{
 #language {
     position: relative;
     float: right;
-    top: -60px;
+    top: -61px;
 }
 
 .flags {
-    width:10%;
+    width:14%;
     margin-right: 0.5%;
     float: right;
 }
@@ -75,7 +75,7 @@ header{
 }
 
 #logoutButton {
-    width: 10%;
+    width: 17%;
     height: 2.5em;
     float: right;
     font-size: 1.5em;
@@ -95,4 +95,9 @@ button, input {
 
 a {
     text-decoration: None;
+}
+
+/*takes up the space where the flags and log out button is so it wont disturb the rest of the content*/
+.whiteSpace{
+    height: 4em;
 }

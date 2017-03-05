@@ -1,8 +1,6 @@
 
 
 $(document).ready(function(){
-
-
     var headerHeight = document.getElementById('tabs').offsetHeight;
     margin = $('body').css('margin');
     margin = parseInt(margin, 10);
@@ -15,10 +13,7 @@ $(document).ready(function(){
             document.getElementById('orderBox').style.top = "0px";
 
         } else {
-
             document.getElementById('orderBox').style.top = (headerHeight-scrollDistance)+"px";
-
         }
     })
-
 });
