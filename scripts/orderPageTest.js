@@ -60,14 +60,185 @@ function createBeveragePrice(divID, inventory, i) {
 }
 
 //creates a buy button below all the drinks on the order page
-function createBuyButton(div){
+function createBuyButton(div, name, price){
     var buyButton = document.createElement("BUTTON");
     buyButton.setAttribute("class", "orderButton");
     buyButton.innerHTML = "Place Order"
+    div.onclick = function(){
+        addItemToOrder(name, price);
+    };
     div.appendChild(buyButton);
 }
 
-//
+var orderModel = {}
+orderModel.orders = [];
+
+function addItemToModel(name, price){
+    //Checks if the drink already exists in the list of drinks
+    var order = null;
+
+    for (var i= 0; i < orderModel.orders.length; i++){
+        if (orderModel.orders[i].name == name){
+            //lays the object that is repeated into a variable and ends teh loop
+            order = orderModel.orders[i];
+            break;
+        }
+    }
+
+    if (order != null){
+        //modifies already existing item in list
+        order.count += 1;
+    } else {
+
+        //Creates new item in list with name, price and the first item
+        var order = {};
+
+        order.name = name;
+        order.price = price;
+        order.count = 1;
+        orderModel.orders.push(order);
+    }
+}
+
+//shows the information for the user in the order side
+function orderView(orderModel) {
+    var orderContent = document.getElementById("usersChosenItems");
+
+    // remove all elements
+    while (orderContent.firstChild) {
+        orderContent.removeChild(orderContent.firstChild);
+    }
+
+    for (var i = 0;i < orderModel.orders.length;i++) {
+        var order = orderModel.orders[i];
+
+        //create div that contains the specific drink on the order page
+        var div = document.createElement("div");
+        div.setAttribute("class", "userItems");
+
+        //Create content for each drink
+        createUserItemCount(div, order.count);
+        createUserItemName(div, order.name);
+        createUserItemDelete(div);
+        createUserItemPrice(div, order.price);
+
+        orderContent.appendChild(div);
+    }
+}
+
+function addItemToOrder(name, price){
+    //changes the display options so that it is visible that the user have items in the order list
+    document.getElementById('orderWithoutItems').style.display = 'none';
+    document.getElementById('orderWithItems').style.display = 'block';
+    document.getElementById('sendOrder').style.display = 'block';
+
+
+    var newName = name;
+    //tests how wide the name is
+    var nameWidth = testText(name);
+
+
+    if(nameWidth > 150){
+        //removes letters until the name is below 190px in widht so it can fit into the order page
+        while  (nameWidth > 190){
+            //takes away one letter at a time to make the word short enough to fit into the order page
+            newName = newName.slice(0, -1);
+            nameWidth = testText(newName);
+        }
+
+        //remove the last three letters and add ... instead to show that the word is longer than what can be seen
+        newName = newName.slice(0, -3);
+        newName = newName + "...";
+    }
+
+
+    //Makes sure the user cant add more than 6 different items to the list of drinks
+    if (orderModel.orders.length <= 5){
+
+        //add item to the model to keep track of all the chosen items and from the model to the view to show it
+        addItemToModel(newName, price);
+
+        //updates HTML elements
+        orderView(orderModel);
+    }
+    calculateTotal();
+    //changes the look of the interface depending on if the user can add more items to the order list or not
+    var buttonArray = document.getElementsByClassName('orderButton');
+    if (orderModel.orders.length > 4){
+        //makes all buttons look unactive
+        for (i = 0; i <buttonArray.length; i++ ){
+            buttonArray[i].style.opacity = '0.3';
+        }
+
+        //popup telling the user what happend when there are to many different drinks.
+        //Starts after 1 millisec to make the drink name visible before the popup appears
+        setTimeout(function() {alert("You can only order 6 different drinks")}, 0.1);
+
+    }else{
+        //makes all buttons fully colored
+        for (i = 0; i < buttonArray.length; i++) {
+            buttonArray[i].style.opacity = '1';
+        }
+    }
+
+}
+
+function createUserItemCount(div, count){
+    var drinkCount = document.createElement("P");
+    drinkCount.setAttribute("class", "userItemCount");
+    drinkCount.innerHTML = count;
+    div.appendChild(drinkCount);
+}
+
+function createUserItemName(div, name){
+    var drinkName = document.createElement("P");
+    drinkName.setAttribute("class", "userItemName");
+    drinkName.innerHTML = name;
+    div.appendChild(drinkName);
+}
+
+function createUserItemDelete(div){
+    var img = document.createElement("IMG");
+    img.setAttribute("class", "userItemDelete");
+    img.src = "images/x.png";
+    div.appendChild(img);
+}
+
+function createUserItemPrice(div, price){
+    var drinkPrice = document.createElement("P");
+    drinkPrice.setAttribute("class", "userItemPrice");
+    drinkPrice.innerHTML = price;
+    div.appendChild(drinkPrice);
+}
+
+/*tests and returns the height of a given text*/
+function testText(text){
+    var testText = document.getElementById("letterTest");
+    testText.innerHTML = text;
+    testText.style.fontSize = "1.5em";
+    var width = parseInt(testText.clientWidth + 1);
+    return width;
+}
+
+//calculates the total amount of money the user have to pay for the order
+function calculateTotal(){
+    var totalPricePara = document.getElementById("totalPrice");
+    var totalPrice = 0;
+
+    for (var i= 0; i < orderModel.orders.length; i++) {
+        //makes the price to a float
+        totalPrice += parseFloat(orderModel.orders[i].price);
+
+    }
+    //Only show two decimals
+    totalPrice = totalPrice.toFixed(2);
+
+    //change the price that can be seen by the user
+    totalPricePara.innerHTML = totalPrice + " KR";
+}
+
+//saves the variables and executes the function that needs
+// (This is the problem solved: http://stackoverflow.com/questions/750486/javascript-closure-inside-loops-simple-practical-example)
 function closure(func, image, name, price) {
     return function() {
         func(image, name, price);
@@ -80,10 +251,16 @@ function display_inventories(inventory){
 
     removeCurrentContent("drinksList");
     var drinkNr = 0;
-    for (var i = 0; i < inventory.length; i++){
+    for (var i = 0; i < inventory.length; i++) {
         if(inventory[i].namn != "" && inventory[i].count > 0) {
+
+            //create div that contains the specific drink and all its information
             var div = document.createElement("div");
             div.setAttribute("class", "drinks");
+
+            //create div that contains the specific drink and all its information except the buybutton
+            var divInfo = document.createElement("div");
+            divInfo.setAttribute("class", "drinksInfo");
 
             //set id for each drink
             var drinkID = "drink" + drinkNr.toString();
@@ -91,15 +268,18 @@ function display_inventories(inventory){
 
             drinkNr++;
 
-            var image = insertImage(div);
-            var name = createBeverageName(div, inventory, i);
-            var price = createBeveragePrice(div, inventory, i);
-            createBuyButton(div);
+            var image = insertImage(divInfo);
+            var name = createBeverageName(divInfo, inventory, i);
+            var price = createBeveragePrice(divInfo, inventory, i);
+            createBuyButton(div, name, price);
 
-            //onclick a page with information about the drink appears
-            //div.setAttribute("onclick", "showDrinkInfo()");
-            div.onclick = closure(showDrinkInfo, image, name, price);
+            //onclick (on image, price, name) a page with information about the drink appears
+            divInfo.onclick = closure(showDrinkInfo, image, name, price);
 
+            //place div info inside of div
+            div.appendChild(divInfo);
+
+            //Place div inside of drinklist div
             tabcontent.appendChild(div);
         }
     }
@@ -182,7 +362,6 @@ function rotation(idName, speed){
     }
 }
 
-
 //Make it possible to see which of the sorting buttons that are active
 function sortButtonsState(buttonID){
     document.getElementById("alph").style.opacity = "0.6";
@@ -199,7 +378,6 @@ function sortButtonsState(buttonID){
     }else if (buttonID == "pop"){
         document.getElementById("pop").style.opacity = "1";
     }
-
 }
 
 // run at start of page

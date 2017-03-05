@@ -22,6 +22,8 @@
 </head>
 
 <body>
+<!--Tests how wide and high a text is--->
+<div id="letterTest"></div>
 
 <main>
     <!--- Creates the tabs with links to content ---->
@@ -50,19 +52,40 @@
             <div id="drinksList" class="drinks">
             </div>
 
-            <div id='orderBox' class="orderBox">
-                <h3 id="orderHeader">Din order</h3>
-                <div id="orderContent" class="orderContent">
-                    <img id="dragNdrop" src="images/dragNdrop.png">
-                    <div id="userOrder">
-                        <div id="undoRedoButtons">
-                            <img id="undo" src="images/undo.png">
-                            <img id="redo" src="images/redo.png">
+        </div>
+        <div id='orderBox' class="orderBox">
+            <h3 id="orderHeader">Din order</h3>
+            <div id="orderContent" class="orderContent">
+                <img id="dragNdrop" src="images/dragNdrop.png">
+
+                <!--- Users order --->
+                <div id="userOrder">
+                    <div id="undoRedoButtons">
+                        <img id="redo" class="undoRedoImages" src="images/redo.png">
+                        <img id="undo" class="undoRedoImages" src="images/undo.png">
+                    </div>
+
+                    <div id="orderWithItems">
+                        <!--- All the items the user have chosen--->
+                        <div id="usersChosenItems"></div>
+
+                        <!---The total price for the order--->
+                        <br>
+                        <div id="totalPriceDiv">
+                            <p id="totalText" class="userTotalText userItemText">Total:</p>
+                            <p id="totalPrice" class="userTotalText userItemText">55.99 kr</p>
                         </div>
                     </div>
 
+                    <div id="orderWithoutItems">
+                        <p id="noItemsText">Choose something to buy!</p>
+
+                    </div>
+
+                    <button id="sendOrder">Send order</button>
 
                 </div>
+
             </div>
         </div>
 
@@ -89,6 +112,8 @@
                     <button id="recDrinkBuy"><p id="recDrinkBuyText">Place Order</p></button>
                 </section>
             </section>
+
+
         </div>
     </div>
 
