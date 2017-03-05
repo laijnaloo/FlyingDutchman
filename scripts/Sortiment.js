@@ -94,6 +94,7 @@ function display_inventories(inventory){
             tabcontent.appendChild(div);
         }
     }
+    setDraggable();
 }
 
 // sort the inventory list alphabetically
@@ -196,6 +197,5 @@ function sortButtonsState(buttonID){
 // run at start of page
 function init(){
     get_beverages();
-    show_beverages_alphabetical()
+    show_beverages_alphabetical();
 }
-
