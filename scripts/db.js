@@ -14,7 +14,6 @@ function db_action(uname, password, action, callback) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var resp = JSON.parse(xhr.responseText);
-            //console.log(resp);
             callback(resp);
         }
     }
@@ -23,8 +22,9 @@ function db_action(uname, password, action, callback) {
 /* By Anna (with help from Tobias) */
 function get_beverages(){
     db_action("jorass", "jorass", "inventory_get", function(invent){
-        //console.log(invent.payload);
-        sessionStorage.setItem("Inventory", JSON.stringify(invent.payload)); //List w. json items of beer
+        if(invent.type = "inventory_get") {
+            sessionStorage.setItem("Inventory", JSON.stringify(invent.payload)); //List w. json items of beer
+        }
+
     });
 }
-
