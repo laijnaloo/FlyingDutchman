@@ -73,13 +73,33 @@ function createBuyButton(div, name, price){
 var orderModel = {}
 orderModel.orders = [];
 
+//history of the changes in the order model, used for undo/redo
+var orderHistory = [JSON.parse(JSON.stringify(orderModel))];
+
+//the number in the history array that is currently shown
+var historyPointer = 0;
+
+function saveHistory() {
+    //copies the data so it will refer to different objects, so that history snapshots will be different objects
+    copy = JSON.parse(JSON.stringify(orderModel));
+
+    // if user has pressed undo before we need to remove "future" states (needs to remove old states before doing new ones)
+    if (historyPointer < orderHistory.length - 1) {
+        orderHistory = orderHistory.slice(0, historyPointer+1);
+    }
+
+    //puts the copy at the end of the history array
+    orderHistory.push(copy);
+    historyPointer++;
+}
+
 function addItemToModel(name, price){
     //Checks if the drink already exists in the list of drinks
     var order = null;
 
     for (var i= 0; i < orderModel.orders.length; i++){
         if (orderModel.orders[i].name == name){
-            //lays the object that is repeated into a variable and ends teh loop
+            //lays the object that is repeated into a variable and ends the loop
             order = orderModel.orders[i];
             break;
         }
@@ -98,11 +118,15 @@ function addItemToModel(name, price){
         order.count = 1;
         orderModel.orders.push(order);
     }
+
+    //copies the model and adds to history (for undo/redo)
+    saveHistory();
 }
 
 //shows the information for the user in the order side
 function orderView(orderModel) {
     var orderContent = document.getElementById("usersChosenItems");
+    changeOpacityUndoRedo();
 
     // remove all elements
     while (orderContent.firstChild) {
@@ -161,6 +185,7 @@ function addItemToOrder(name, price){
         //updates HTML elements
         orderView(orderModel);
     }
+
     calculateTotal();
     //changes the look of the interface depending on if the user can add more items to the order list or not
     var buttonArray = document.getElementsByClassName('orderButton');
@@ -180,7 +205,6 @@ function addItemToOrder(name, price){
             buttonArray[i].style.opacity = '1';
         }
     }
-
 }
 
 function createUserItemCount(div, count){
@@ -235,6 +259,60 @@ function calculateTotal(){
 
     //change the price that can be seen by the user
     totalPricePara.innerHTML = totalPrice + " KR";
+}
+
+//undo and redo function making it possible for the user to remove and take away items that
+//have been in the order bag previously
+function undoRedo(state){
+    //check if the user wants to go forward or backward in the history array
+    if (state == "1"){
+        //if state is 1 - redo
+
+        //Check that it is possible to move forward in the history states
+        if(historyPointer < orderHistory.length - 1){
+
+            //moves one way forward from the state previously shown
+            historyPointer++;
+
+            //takes the state of the "future" history state
+            orderModel = orderHistory[historyPointer];
+
+            //copy needed
+            orderModel = JSON.parse(JSON.stringify(orderModel));
+            orderView(orderModel);
+        }
+
+    } else if(state == "-1") {
+        //if state is -1 - undo
+
+        //Check that it is possible to move backward in the history states
+        if(historyPointer > 0 ){
+            historyPointer--;
+            //moves one way backward from the state previously shown
+            orderModel = orderHistory[historyPointer];
+            orderModel = JSON.parse(JSON.stringify(orderModel));
+            orderView(orderModel);
+        }
+    }
+    changeOpacityUndoRedo()
+
+}
+
+function changeOpacityUndoRedo(){
+
+    //change both buttons to active
+    document.getElementById('redo').style.opacity = '0.2';
+    document.getElementById('undo').style.opacity = '0.2';
+
+    //check if the user is on either end of the history array
+    if (historyPointer < orderHistory.length - 1){
+        document.getElementById('redo').style.opacity = '1';
+    }
+
+    if (historyPointer > 0) {
+        document.getElementById('undo').style.opacity = '1';
+    }
+
 }
 
 //saves the variables and executes the function that needs

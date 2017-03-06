@@ -91,6 +91,7 @@
     float: right;
     width: 1.8em;
     margin-left: 5%;
+    opacity: 0.2;
 }
 
 .userItemName{
