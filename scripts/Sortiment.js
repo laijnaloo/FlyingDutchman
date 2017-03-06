@@ -40,10 +40,10 @@ function insertImage(divID){
 function createBeverageName(divID, inventory, i){
     var name = document.createElement("P");
     name.setAttribute("class", "namePara");
-
     //Give the names a new fontsize and fontfamily so it differs from the price
-    name.style.fontSize = "1.3em";
+    name.style.fontSize = "0.8em";
     name.style.fontFamily = "roboto";
+    name.style.height = "5%";
     var name_text = inventory[i].namn + " " + inventory[i].namn2;
     name.appendChild(document.createTextNode(name_text));
     divID.appendChild(name);

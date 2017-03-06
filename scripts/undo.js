@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", init, false);
 
 
 function init(){
-    order = JSON.parse(localStorage.getItem("order"));
+    order = localStorage.getItem("order");//JSON.parse(localStorage.getItem("order"));
     cursor = localStorage.getItem("undoCursor");
     if(order == null) {
         order = [];

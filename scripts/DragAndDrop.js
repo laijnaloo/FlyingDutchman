@@ -16,6 +16,11 @@ function setDraggable() {
         activeClass: "ui-state-default",
         hoverClass: "ui-state-hover",
         drop: function (event, ui) {
+
+            //var order = JSON.parse(localStorage.getItem("order"));
+            //order.append()
+            //localStorage.setItem("order", "Name: " + ui.draggable.find('p')[0].innerHTML);
+            console.log(ui.draggable.find('p')[0].innerHTML);
             $(document.getElementById("orderName")).append($(ui.draggable.find('p')[0]).clone());
             $(document.getElementById("orderPrice")).append($(ui.draggable.find('p')[1]).clone());
 
