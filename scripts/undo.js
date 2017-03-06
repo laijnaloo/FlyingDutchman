@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", init, false);
 
 
 function init(){
-    order = localStorage.getItem("order");//JSON.parse(localStorage.getItem("order"));
+    order = JSON.parse(localStorage.getItem("order"));
     cursor = localStorage.getItem("undoCursor");
     if(order == null) {
         order = [];
@@ -27,11 +27,15 @@ function add(ID){
 
 /* if array not empty, move cursor back and return that item */
 function undo(){
-    if(order.length > 0){
+    order = JSON.parse(sessionStorage.getItem("order"));
+
+
+    /*if(order.length > 0){
         cursor--;
         localStorage.setItem("undoCursor", cursor);
         return order[cursor - 1];
-    }
+    }*/
+    console.log(order.pop());
     console.log("No undo available");
     return 0;
 }
