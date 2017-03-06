@@ -50,7 +50,18 @@
     height: 10vh;
     position: absolute;
 }
-
+.pay {
+    font-family: "roboto";
+    font-size: 20px;
+    color:#76a3b6;
+    text-align: center;
+    position: relative;
+    left: 30%;
+    background-color: #ffffff;
+    width:40%;
+    height: 3em;
+    display: block;
+}
 .unredo {
     border: solid 1px;
     border-color: #ffffff;
