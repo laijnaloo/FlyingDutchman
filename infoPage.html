@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="tabs.css">
     <link rel="stylesheet" type="text/css" href="infoPage.css">
     <script src="scripts/Tabcontent.js"></script>
+    <script src="scripts/Order.js"></script>
 </head>
 
 <body>
@@ -68,6 +69,10 @@
 <script>
     // Shows the content of beer when starting page
     document.getElementById("Drinks").click();
+    var butn = document.getElementById("recDrinkBuy");
+    var name = document.getElementById("recDrinkName").innerHTML;
+    var price = document.getElementById("recDrinkPrice").innerHTML * document.getElementById("countNumber").innerHTML;
+    butn.onclick(addItemToOrder(name, price));
 </script>
 
 </html>

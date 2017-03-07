@@ -4,56 +4,59 @@
 <head>
     <title>The flying Dutchman</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="loginstyle.css">
+    <link rel="stylesheet" type="text/css" href="General.css">
+    <link rel="stylesheet" type="text/css" href="Drinks.css">
     <link rel="stylesheet" type="text/css" href="tabs.css">
-    <script src="scripts/Tabcontent.js"></script>
-    <script src="scripts/Sortiment.js"></script>
+    <link rel="stylesheet" type="text/css" href="SortimentContent.css">
+    <link rel="stylesheet" type="text/css" href="eventPage.css">
+    <link rel="stylesheet" type="text/css" href="infoPage.css">
+
+    <script src="scripts/jquery-3.1.1.js"></script>
     <script src="scripts/db.js"></script>
-    <script src="scripts/content.js"></script>
+    <script src="scripts/Tabcontent.js"></script>
+    <script src="scripts/staffview.js"></script>
+    <script src="scripts/Sortiment.js"></script>
 </head>
 
 <body>
-<header>
-
-<</header>
 
 <main>
     <!--- Creates the tabs with links to content ---->
     <div class="tabs">
-        <a href="javascript:void(0)" class="tabTitle" id="orders" onclick="openTab(event, 'drinksTab', 'Drinks')"> Beställningar </a>
-        <a href="javascript:void(0)" class="tabTitle" id="customer" onclick="openTab(event, 'eventsTab', 'Drinks')"> Kunder </a>
-        <a href="javascript:void(0)" class="tabTitle" id="setting" onclick="openTab(event, 'aboutTab', 'Drinks')"> Inställningar </a>
-
-
-        <div id="langOption">
-            <img src="images/sv.png" alt="span" title="Swedish" width="50" id="en">
-            <img src="images/en.png" alt="span" title="English" width="50" id="sv">
-        </div>
-
-        <a class="BackToStart" id="start" onclick="location.href='FirstPage.html';" >logga ut</a>
+        <a href="javascript:void(0)" class="tabTitle" id="orders" onclick="openTab(event, 'orderTab', 'Drinks')"> Orders </a>
+        <a href="javascript:void(0)" class="tabTitle" id="customer" onclick="openTab(event, 'customerTab', 'Drinks')"> Customer </a>
+        <a href="javascript:void(0)" class="tabTitle" id="settings" onclick="openTab(event, 'settingTab', 'Drinks')"> Settings </a>
+    </div>
+    <div id="language">
+        <button id="logoutButton" onclick="location.href='FirstPage.html'">Back to Start</button>
+        <img src="images/sv.png" class="flags" alt="Swedish flag" title="Swedish" id="en" onclick="changeLanguage('en')">
+        <img src="images/en.png" class="flags" alt="English flag" title="English" id="sv" onclick="changeLanguage('sv')">
 
     </div>
 
     <!--- Content of tabs ---->
-    <div id='drinksTab' class="tabContent">
+    <div id='orderTab' class="tabContent">
+        <div class="whiteSpace"></div>
+        Order
 
     </div>
 
-    <div id='eventsTab' class="tabContent">
+    <div id='customerTab' class="tabContent">
+        <div class="whiteSpace"></div>
 
+        <p id ="all_user"></p>
     </div>
 
-    <div id='aboutTab' class="tabContent">
 
+    <div id='settingTab' class="tabContent">
+        <div class="whiteSpace"></div>
+        setting
     </div>
+
 </main>
 
 
-
 </body>
-<script>
-    // Shows the content of beer when starting page
-    document.getElementById("Drinks").click();
-</script>
+
 
 </html>

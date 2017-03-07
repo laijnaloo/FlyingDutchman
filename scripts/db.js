@@ -28,3 +28,11 @@ function get_beverages(){
 
     });
 }
+
+function get_all_users() {
+    db_action("jorass", "jorass", "iou_get_all", function(invent){
+        if(invent.type = "iou_get_all") {
+            sessionStorage.setItem("all_users", JSON.stringify(invent.payload));
+        }
+    });
+}

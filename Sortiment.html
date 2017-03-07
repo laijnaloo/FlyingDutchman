@@ -11,6 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="eventPage.css">
 	<link rel="stylesheet" type="text/css" href="infoPage.css">
 
+	<script src="scripts/jquery-3.1.1.js"></script>
+	<script src="scripts/content.js"></script>
     <script src="scripts/Tabcontent.js"></script>
 	<script src="scripts/Sortiment.js"></script>
 	<script src="scripts/db.js"></script>
@@ -21,12 +23,12 @@
 <main>
 <!--- Creates the tabs with links to content ---->
     <div class="tabs">
-		<a href="javascript:void(0)" class="tabTitle" id="Drinks" onclick="openTab(event, 'drinksTab', 'Drinks')"> Drinks </a>
-		<a href="javascript:void(0)" class="tabTitle" id="Events" onclick="openTab(event, 'eventsTab', 'Drinks')"> Events </a>
-		<a href="javascript:void(0)" class="tabTitle" id="About" onclick="openTab(event, 'aboutTab', 'Drinks')"> About </a>
+		<a href="javascript:void(0)" class="tabTitle" id="Drinks" onclick="openTab(event, 'drinksTab', 'Drinks')"> </a>
+		<a href="javascript:void(0)" class="tabTitle" id="Events" onclick="openTab(event, 'eventsTab', 'Drinks')"> </a>
+		<a href="javascript:void(0)" class="tabTitle" id="About" onclick="openTab(event, 'aboutTab', 'Drinks')">  </a>
 	</div>
 	<div id="language">
-		<button id="logoutButton" onclick="location.href='FirstPage.html'">Back to Start</button>
+		<button id="logoutButton" onclick="location.href='FirstPage.html'"></button>
 		<img src="images/sv.png" class="flags" alt="Swedish flag" title="Swedish" id="en" onclick="changeLanguage('en')">
 		<img src="images/en.png" class="flags" alt="English flag" title="English" id="sv" onclick="changeLanguage('sv')">
 
@@ -38,8 +40,8 @@
 		<div id="inventoryPage">
 			<div id="sortButtons">
 				<input type="button" value="A-Ö" id="alph" class="sortButtons" onclick="show_beverages_alphabetical()">
-				<input type="button" value="Price" id="price" class="sortButtons rightButtons" onclick="show_beverages_price()">
-				<input type="button" value="Popularity" id="pop" class="sortButtons rightButtons" onclick="show_beverages_random()">
+				<button id="price" class="sortButtons rightButtons" onclick="show_beverages_price()">
+				<button id="pop" class="sortButtons rightButtons" onclick="show_beverages_random()">
 			</div>
 
 			<div id="drinksList" class="drinks">
@@ -77,7 +79,7 @@
 			<img class="eventpic" src="images/eventpic2_beer.jpg">
 			<p class="eventDesciption">Friday 4th of April we'll have a beer tasting here at the flying dutchman.
 				To join it's necessary t sign up. In case of interest, talk to a bartender!
-				The price will be 350SEK for thew entire evening. The bar will be open as usual for other cutomers.
+				The price will be 350SEK for the entire evening. The bar will be open as usual for other customers.
 			</p>
 		</div>
 		<div class="events">
