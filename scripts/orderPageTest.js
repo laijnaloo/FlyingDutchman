@@ -367,6 +367,7 @@ function display_inventories(inventory){
             tabcontent.appendChild(div);
         }
     }
+    setDraggable();
 }
 
 // sort the inventory list alphabetically
@@ -467,6 +468,13 @@ function sortButtonsState(buttonID){
 // run at start of page
 function init(){
     get_beverages();
-    show_beverages_alphabetical()
+ $.ajax({ //Initial fetch of beverages
+     type:'GET',
+     url:'http://pub.jamaica-inn.net/fpdb/api.php?username=jorass&password=jorass&action=inventory_get',
+     dataType:'json',
+     success:function (resp) {
+     show_beverages_alphabetical(resp.payload);
+     }
+ });
 }
 
