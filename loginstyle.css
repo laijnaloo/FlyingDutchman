@@ -63,6 +63,7 @@ This file is currently the css file for the first page and the login page.
     border-bottom: solid 1px;
     border-color: gray;
     background-color: white;
+    color:black;
 }
 
 /*This is the select buttons on the LoginPage*/
