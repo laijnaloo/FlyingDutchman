@@ -8,6 +8,12 @@
     position: relative;
 }
 
+/*place the infodiv more to the left to make space for the order bag*/
+#recDrinkDiv {
+    margin-left:22%;
+
+}
+
 .orderBox {
     background-color: #76a3b6;
     width: 30%;
