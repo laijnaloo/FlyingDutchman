@@ -27,9 +27,9 @@ $(document).ready(function(){
     });
 });
 
-function getData(string,language,place) {
+function getData(string,language,place,file) {
     $.ajax({
-        url: "data.txt",
+        url: file,
         dataType: "text",
         success: function (data) {
             var d = data;
@@ -55,18 +55,26 @@ function getData(string,language,place) {
 
 function writeData(lang) {
     // First Page
-    getData("welcome-string",lang,"#welcome");
-    getData("sort",lang,"#sortiment");
-    getData("login",lang,"#login");
-    getData("staff",lang,"#staffOption");
+    getData("welcome-string",lang,"#welcome","data/firstpage.txt");
+    getData("sort",lang,"#sortiment","data/firstpage.txt");
+    getData("login",lang,"#login","data/firstpage.txt");
+    getData("staff",lang,"#staffOption","data/firstpage.txt");
 
     //Login Page
-    getData("login",lang,"#logintext");
-    getData("back",lang,"#back");
-    getData("login",lang,"#loginButton");
-    getData("stafflogin",lang,"#staffLogintext");
+    getData("login",lang,"#logintext","data/firstpage.txt");
+    getData("back",lang,"#back","data/firstpage.txt");
+    getData("login",lang,"#loginButton","data/firstpage.txt");
+    getData("stafflogin",lang,"#staffLogintext","data/firstpage.txt");
 
+    // Collection page
 
+    getData("drinks",lang,"#Drinks","data/sortiment.txt");
+    getData("events",lang,"#Events","data/sortiment.txt");
+    getData("about",lang,"#About","data/sortiment.txt");
+    getData("back",lang,"#logoutButton","data/sortiment.txt");
+
+    getData("pop",lang,"#pop","data/tabs.txt");
+    getData("price",lang,"#price","data/tabs.txt");
 
 }
 
