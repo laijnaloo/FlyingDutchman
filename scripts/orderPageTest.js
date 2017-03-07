@@ -176,7 +176,7 @@ function addItemToOrder(name, price){
     }
 
 
-    //Makes sure the user cant add more than 6 different items to the list of drinks
+
     if (orderModel.orders.length <= 5){
 
         //add item to the model to keep track of all the chosen items and from the model to the view to show it
@@ -187,17 +187,20 @@ function addItemToOrder(name, price){
     }
 
     calculateTotal();
+}
+
+function changeButtonOpacity(){
     //changes the look of the interface depending on if the user can add more items to the order list or not
     var buttonArray = document.getElementsByClassName('orderButton');
-    if (orderModel.orders.length > 4){
+
+     if ((orderModel.orders.length-1) > 4){
         //makes all buttons look unactive
         for (i = 0; i <buttonArray.length; i++ ){
             buttonArray[i].style.opacity = '0.3';
         }
-
-        //popup telling the user what happend when there are to many different drinks.
-        //Starts after 1 millisec to make the drink name visible before the popup appears
-        setTimeout(function() {alert("You can only order 6 different drinks")}, 0.1);
+         //popup telling the user what happend when there are to many different drinks.
+         //Starts after 1 millisec to make the drink name visible before the popup appears
+         setTimeout(function() {alert("You can only order 5 different drinks")}, 0.1);
 
     }else{
         //makes all buttons fully colored
@@ -294,7 +297,7 @@ function undoRedo(state){
             orderView(orderModel);
         }
     }
-    changeOpacityUndoRedo()
+    changeOpacityUndoRedo();
 
 }
 
@@ -312,6 +315,9 @@ function changeOpacityUndoRedo(){
     if (historyPointer > 0) {
         document.getElementById('undo').style.opacity = '1';
     }
+    //Makes sure the user cant add more than 5 different items to the list of drinks
+    changeButtonOpacity();
+
 
 }
 

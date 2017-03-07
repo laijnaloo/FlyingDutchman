@@ -21,8 +21,6 @@
     width:40%;
     display: block;
     padding-top:40px;
-    margin-left:auto;
-    margin-right: auto;
     height: 50vh;
 }
 
@@ -54,7 +52,7 @@
     width: 80%;
     height: 20%;
     position:absolute;
-    bottom:0%;
+    bottom:-5%;
 }
 
 #recDrinkBuyText {
