@@ -5,7 +5,7 @@
 .orderBox {
     background-color: #76a3b6;
     width: 30%;
-    height: 95vh;
+    height: 100vh;
     position: fixed;
     /*left: 70%;*/
     right: 0;
@@ -22,10 +22,11 @@
 .orderContent {
     background-color: #76a3b6;
     width: 100%;
-    height: 95vh;
+    height: 70vh;
     position: absolute;
     top:45%;
     color: white;
+    overflow: auto;
 }
 
 .orderPrice {
@@ -33,36 +34,38 @@
     width: 50%;
     top: 0px;
     float: left;
-    height: 95vh;
+    height: 70vh;
 }
 .orderName {
     background-color: #76a3b6;
     width: 50%;
     top: 0px;
     float: left;
-    height: 95vh;
+    height: 70vh;
 }
 .Payment {
     background-color: #76a3b6;
     width: 100%;
-    top: 80%;
-    height: 95vh;
+    bottom: 0px;
+    height: 10vh;
     position: absolute;
 }
-
+.pay {
+    font-family: "roboto";
+    font-size: 20px;
+    color:#76a3b6;
+    text-align: center;
+    position: relative;
+    left: 30%;
+    background-color: #ffffff;
+    width:40%;
+    height: 3em;
+    display: block;
+}
 .unredo {
     border: solid 1px;
     border-color: #ffffff;
     margin: 1%;
-}
-
-.orderPrice p {
-    color: white;
-    text-align: right;
-    width: 60%;
-    margin: 0 1%;
-    height: 5%;
-
 }
 
 .orderName p {
@@ -71,5 +74,11 @@
     text-align: center;
     width: 100%;
     margin: 0 1%;
-
+}
+.orderPrice p {
+    color: white;
+    text-align: right;
+    width: 60%;
+    margin: 0 1%;
+    height: 5%;
 }

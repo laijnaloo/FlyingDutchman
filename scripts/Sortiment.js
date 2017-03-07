@@ -40,10 +40,10 @@ function insertImage(divID){
 function createBeverageName(divID, inventory, i){
     var name = document.createElement("P");
     name.setAttribute("class", "namePara");
-
     //Give the names a new fontsize and fontfamily so it differs from the price
-    name.style.fontSize = "1.3em";
+    name.style.fontSize = "0.8em";
     name.style.fontFamily = "roboto";
+    name.style.height = "5%";
     var name_text = inventory[i].namn + " " + inventory[i].namn2;
     name.appendChild(document.createTextNode(name_text));
     divID.appendChild(name);
@@ -98,10 +98,12 @@ function display_inventories(inventory){
 }
 
 // sort the inventory list alphabetically
-function show_beverages_alphabetical(){
-    var temp_inventory = sessionStorage.getItem("Inventory");
-    inventory = JSON.parse(temp_inventory);
-    //console.log(inventory);
+function show_beverages_alphabetical(inventory){
+    if (inventory == null) {
+        var temp_inventory = sessionStorage.getItem("Inventory");
+        inventory = JSON.parse(temp_inventory);
+        //console.log(inventory);
+    }
     inventory.sort(function(a, b){if( a.name > b.name)
         return a;});
     //console.log(inventory);
@@ -196,6 +198,14 @@ function sortButtonsState(buttonID){
 
 // run at start of page
 function init(){
-    get_beverages();
-    show_beverages_alphabetical();
+    $.ajax({ //Initial fetch of beverages
+        type:'GET',
+        url:'http://pub.jamaica-inn.net/fpdb/api.php?username=jorass&password=jorass&action=inventory_get',
+        dataType:'json',
+        success:function (resp) {
+            show_beverages_alphabetical(resp.payload);
+        }
+    });
+    get_beverages(); //Stores beverages in sessionsStorage so we don't need to fetch them again.
+
 }
