@@ -60,6 +60,7 @@ function undoRedo(state){
         }
     }
     changeOpacityUndoRedo();
+    calculateTotal();
 
 }
 

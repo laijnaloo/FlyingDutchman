@@ -181,7 +181,7 @@ function calculateTotal(){
 
     for (var i= 0; i < orderModel.orders.length; i++) {
         //makes the price to a float
-        totalPrice += parseFloat(orderModel.orders[i].price);
+        totalPrice += parseFloat(orderModel.orders[i].price * orderModel.orders[i].count);
 
     }
     //Only show two decimals
