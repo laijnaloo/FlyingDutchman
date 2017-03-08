@@ -68,10 +68,10 @@ function writeData(lang) {
 
     // Collection page
 
-    getData("drinks",lang,"#Drinks","data/sortiment.txt");
-    getData("events",lang,"#Events","data/sortiment.txt");
-    getData("about",lang,"#About","data/sortiment.txt");
-    getData("back",lang,"#logoutButton","data/sortiment.txt");
+    getData("drinks",lang,"#Drinks","data/tabs.txt");
+    getData("events",lang,"#Events","data/tabs.txt");
+    getData("about",lang,"#About","data/tabs.txt");
+    getData("back",lang,"#logoutButton","data/tabs.txt");
 
     getData("pop",lang,"#pop","data/tabs.txt");
     getData("price",lang,"#price","data/tabs.txt");
