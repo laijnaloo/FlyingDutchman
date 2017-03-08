@@ -22,17 +22,6 @@ function openTab(event, title, linkTitle){
 	document.getElementById(linkTitle).style.zIndex = "10";
 }
 
-function changeLanguage(language){
-
-	//change opacity of the flag image
-	if (language == 'en'){
-		document.getElementById("sv").style.opacity = "0.5";
-		document.getElementById("en").style.opacity = "1";
-	} else {
-		document.getElementById("en").style.opacity = "0.5";
-		document.getElementById("sv").style.opacity = "1";
-	}
-}
 function countDrinks(change){
 	var counterNr = countNumber.innerHTML;
 

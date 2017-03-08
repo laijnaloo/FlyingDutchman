@@ -14,7 +14,6 @@ $(document).ready(function(){
         lang = localStorage.getItem("language");
         writeData(lang);
         setPlaceholder();
-        fade(lang);
 
     });
 
@@ -23,7 +22,6 @@ $(document).ready(function(){
         lang = localStorage.getItem("language");
         writeData(lang);
         setPlaceholder();
-        fade(lang);h
     });
 });
 

@@ -22,7 +22,7 @@ loginstyle.css
     <script src="scripts/content.js"></script>
 </head>
 
-<body onload="checkCookie()">
+<body>
 <!--
 The header contains options for changing language.
 the main structure is based on three different div sections: language option,login boxes and staff button.
@@ -30,8 +30,8 @@ the main structure is based on three different div sections: language option,log
 <header>
     <!--Language options -->
     <div>
-        <input type="image" alt="span" width="50" id="sv" src="images/sv.png" />
-        <input type="image" alt="span" width="50" id= "en" src="images/en.png" />
+        <input type="image" alt="span" width="50" id="sv" src="images/sv.png" onclick="fade("sv")"/>
+        <input type="image" alt="span" width="50" id= "en" src="images/en.png" onclick="fade("en")" />
     </div>
 </header>
 
