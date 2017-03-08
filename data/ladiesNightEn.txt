@@ -1,0 +1,6 @@
+<h4 class="contentHeader">Girls Night</h4>
+<img class="eventpic" src="images/eventpic3_ladies.jpg">
+<p class="contentText">
+Girls night out is coming to the flying dutchman! The 10th of May will be a ladies-only night. Classic music, pink drinks
+and a surprise band will show up this evening.No men allowed!
+</p>

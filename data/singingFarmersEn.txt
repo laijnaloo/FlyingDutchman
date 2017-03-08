@@ -1,0 +1,6 @@
+<h4 class="contentHeader">The singning farmers</h4>
+<img class="eventpic" src="images/eventpic.JPG">
+<p class="contentText">
+On Sunday the 3rd of March the local band singning farmers will join us here in the flying dutchman and play us some songs.
+he bar will be open as usual between 10pm and 2am. The band will be playing 11pm to 12pm.
+</p>

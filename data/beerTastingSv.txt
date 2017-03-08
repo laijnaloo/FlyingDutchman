@@ -1,0 +1,7 @@
+<h4 class="contentHeader">ölprovning på the flying dutchman!</h4>
+<img class="eventpic" src="images/eventpic2_beer.jpg">
+<p class="contentText">
+Att ansluta sig till är det nödvändigt att registrera dig. Vid intresse, prata med bartender!
+Priset kommer att vara 350SEK för hela kvällen. Baren kommer att vara öppet som vanligt för andra kunder.
+
+</p>

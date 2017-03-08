@@ -44,12 +44,22 @@ function getData(string,language,place,file) {
                     if (language == "en") {
                         $(place).html(option[2]);
                         } else {
-                            $(place).text(option[1]);
+                            $(place).html(option[1]);
 
                         }
                     }
                 }
             }
+    });
+}
+
+function getFile(file,place){
+    $.ajax({
+        url: file,
+        dataType: "text",
+        success: function (data) {
+            $(place).html(data);
+        }
     });
 }
 
@@ -76,6 +86,18 @@ function writeData(lang) {
     getData("pop",lang,"#pop","data/tabs.txt");
     getData("price",lang,"#price","data/tabs.txt");
 
+    if(lang =='en') {
+        getFile("data/aboutEn.txt", "#aboutFlying");
+        getFile("data/singingFarmersEn.txt","#singingFarmers");
+        getFile("data/beerTastingEn.txt","#beerTasting");
+        getFile("data/ladiesNightEn.txt","#ladiesNight");
+
+    }else {
+        getFile("data/aboutSv.txt", "#aboutFlying");
+        getFile("data/singingFarmersSv.txt","#singingFarmers");
+        getFile("data/beerTastingSv.txt","#beerTasting");
+        getFile("data/ladiesNightSv.txt","#ladiesNight");
+    }
 }
 
 function setPlaceholder(){

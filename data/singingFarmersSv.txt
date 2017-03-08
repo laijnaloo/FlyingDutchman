@@ -1,0 +1,7 @@
+<h4 class="contentHeader">The singning farmers</h4>
+<img class="eventpic" src="images/eventpic.JPG">
+<p class="contentText">
+
+På söndag den 3 mars lokalt band singning bönder kommer att ansluta oss här i flygande holländaren och spela oss några låtar.
+han bar kommer att vara öppet som vanligt från 10:00 till 02:00. Bandet kommer att spela från 23:00 till 12:00.
+</p>
