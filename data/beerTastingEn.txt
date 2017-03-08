@@ -1,0 +1,6 @@
+<h4 class="contentHeader">Beer tasting at the flying dutchman!</h4>
+<img class="eventpic" src="images/eventpic2_beer.jpg">
+<p class="contentText">Friday 4th of April we'll have a beer tasting here at the flying dutchman.
+To join it's necessary t sign up. In case of interest, talk to a bartender!
+The price will be 350SEK for the entire evening. The bar will be open as usual for other customers.
+</p>

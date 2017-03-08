@@ -47,6 +47,7 @@ This file is currently the css file for the first page and the login page.
     width:40%;
 }
 
+/* This is for the username and password input on the login page!*/
 #passwordLoginOption, #unameLoginOption{
     display:block;
     margin-left: auto;
@@ -87,27 +88,12 @@ This file is currently the css file for the first page and the login page.
     display: block;
     }
 
+
 /*positioning of the selection buttons*/
 #back{
     margin-left: 14.5%;
 }
 
-/*The button to get back to the main menu from*/
-/*#start{
-    font-family: "roboto";
-    font-size: 12px;
-    color:white;
-    background-color: #76a3b6;
-    opacity: 0.5;
-    width: 3em;
-    height: 3px;
-    margin-left:1px;
-    position: absolute;
-    float:left;
-    right:1em;
-    margin-top:20px;
-
-}*/
 /*
 END of file loginstyle.css
  */

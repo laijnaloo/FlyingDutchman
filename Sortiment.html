@@ -29,8 +29,8 @@
 	</div>
 	<div id="language">
 		<button id="logoutButton" onclick="location.href='FirstPage.html'"></button>
-		<img src="images/sv.png" class="flags" alt="Swedish flag" title="Swedish" id="en" onclick="changeLanguage('en')">
-		<img src="images/en.png" class="flags" alt="English flag" title="English" id="sv" onclick="changeLanguage('sv')">
+		<img src="images/sv.png" class="flags" alt="Swedish flag" title="Swedish" id="sv" onclick="fade('sv')">
+		<img src="images/en.png" class="flags" alt="English flag" title="English" id="en" onclick="fade('en')">
 
 	</div>
 
@@ -65,33 +65,12 @@
 
 	<div id='eventsTab' class="tabContent">
 		<div class="whiteSpace"></div>
-		<h3 class="pageHeader">Upcomming events</h3>
+		<h3 class="pageHeader">Upcoming events</h3>
 		<div class="contentDiv">
-			<div>
-				<h4 class="contentHeader">The singning farmers</h4>
-				<img class="eventpic" src="images/eventpic.JPG">
-				<p class="contentText">
-					On Sunday the 3rd of March the local band singning farmers will join us here in the flying dutchman and play us some songs.
-					The bar will be open as usual between 10pm and 2am. The band will be playing 11pm to 12pm.
-				</p>
-			</div>
-			<div class="events">
-				<h4 class="contentHeader">Beer tasting at the flying dutchman!</h4>
-				<img class="eventpic" src="images/eventpic2_beer.jpg">
-				<p class="contentText">Friday 4th of April we'll have a beer tasting here at the flying dutchman.
-					To join it's necessary t sign up. In case of interest, talk to a bartender!
-					The price will be 350SEK for the entire evening. The bar will be open as usual for other customers.
-				</p>
-			</div>
-			<div class="events">
-				<h4 class="contentHeader">Girls Night</h4>
-				<img class="eventpic" src="images/eventpic3_ladies.jpg">
-				<p class="contentText">
-					Girls night out is coming to the flying dutchman! The 10th of May will be a ladies-only night. Classic music, pink drinks and a surprise band will show up this evening.
-					No men allowed!
-				</p>
-			</div>
-			</div>
+			<div class ="events" id = "singingFarmers"></div>
+			<div class="events" id ="beerTasting"></div>
+			<div class="events" id ="ladiesNight"></div>
+		</div>
 	</div>
 
 
@@ -100,12 +79,7 @@
 
 		<div class="contentDiv">
 			<h3 class="pageHeader">The Flying Dutchman</h3>
-			<h4 class="contentHeader">The Story</h4>
-			<p class="contentText">The Flying Dutchman (Dutch: De Vliegende Hollander) is a legendary ghost ship that can never make port and is doomed to sail the oceans forever. The myth is likely to have originated from 17th-century nautical folklore. The oldest extant version has been dated to the late 18th century. Sightings in the 19th and 20th centuries reported the ship to be glowing with ghostly light. If hailed by another ship, the crew of the Flying Dutchman will try to send messages to land, or to people long dead. In ocean lore, the sight of this phantom ship is a portent of doom. </p>
-
-			<h4 class="contentHeader">The Pub</h4>
-			<p class="contentText">In 1985 two beer loving students called Laura and Tom moved to Uppsala to study, but even though there was a a lot of places to go to for beer - not one of them could meet the two friends desire in variety. So, four years after their first steps in Uppsala they started the pub The Flying Dutchman and ever since the pub have been a huge success. </p>
-
+			<p id="aboutFlying" class="contentText"> </p>
 			<img id="logo" src="images/logo2.png">
 		</div>
 	</div>

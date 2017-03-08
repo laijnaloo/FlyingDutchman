@@ -111,16 +111,29 @@ function createBuyButton(div, name, price){
 }
 
 
+//Displays the current user and the users assets at the top of the orderBox.
+function displayCurrentUser() {
+    if(sessionStorage.getItem("Firstname") != null) {
+        var firstName = sessionStorage.getItem("Firstname");
+        var lastName = sessionStorage.getItem("Lastname");
+        var assets = sessionStorage.getItem("Assets");
+        document.getElementById("currentUser").innerText = firstName + " " + lastName + "\n Saldo: " + assets;
+    }
+
+}
+
+
 // run at start of page
 function init(){
     get_beverages();
- $.ajax({ //Initial fetch of beverages
-     type:'GET',
-     url:'http://pub.jamaica-inn.net/fpdb/api.php?username=jorass&password=jorass&action=inventory_get',
-     dataType:'json',
-     success:function (resp) {
-     show_beverages_alphabetical_w_button(resp.payload);
-     }
- });
+    $.ajax({ //Initial fetch of beverages
+         type:'GET',
+         url:'http://pub.jamaica-inn.net/fpdb/api.php?username=jorass&password=jorass&action=inventory_get',
+         dataType:'json',
+         success:function (resp) {
+         show_beverages_alphabetical_w_button(resp.payload);
+         }
+    });
+    displayCurrentUser();
 }
 
