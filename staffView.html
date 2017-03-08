@@ -5,52 +5,58 @@
     <title>The flying Dutchman</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="General.css">
-    <link rel="stylesheet" type="text/css" href="Drinks.css">
     <link rel="stylesheet" type="text/css" href="tabs.css">
-    <link rel="stylesheet" type="text/css" href="SortimentContent.css">
-    <link rel="stylesheet" type="text/css" href="eventPage.css">
-    <link rel="stylesheet" type="text/css" href="infoPage.css">
+    <link rel="stylesheet" type="text/css" href="staffView.css">
 
-    <script src="scripts/jquery-3.1.1.js"></script>
-    <script src="scripts/db.js"></script>
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+    <!--<script src="scripts/content.js"></script>-->
     <script src="scripts/Tabcontent.js"></script>
-    <script src="scripts/staffview.js"></script>
-    <script src="scripts/Sortiment.js"></script>
+    <script src="scripts/getAllCustomers.js"></script>
+    <script src="scripts/db.js"></script>
+
+
 </head>
 
 <body>
+<!--Tests how wide and high a text is--->
+<div id="letterTest"></div>
 
 <main>
     <!--- Creates the tabs with links to content ---->
-    <div class="tabs">
-        <a href="javascript:void(0)" class="tabTitle" id="orders" onclick="openTab(event, 'orderTab', 'Drinks')"> Orders </a>
-        <a href="javascript:void(0)" class="tabTitle" id="customer" onclick="openTab(event, 'customerTab', 'Drinks')"> Customer </a>
-        <a href="javascript:void(0)" class="tabTitle" id="settings" onclick="openTab(event, 'settingTab', 'Drinks')"> Settings </a>
+    <div class="tabs" id="tabs">
+        <a href="javascript:void(0)" class="tabTitle" id="Drinks" onclick="openTab(event, 'drinksTab', 'Drinks')">Customers</a>
+        <a href="javascript:void(0)" class="tabTitle" id="Events" onclick="openTab(event, 'eventsTab', 'Drinks')">Collection</a>
+        <a href="javascript:void(0)" class="tabTitle" id="About" onclick="openTab(event, 'aboutTab', 'Drinks')">Settings</a>
     </div>
     <div id="language">
-        <button id="logoutButton" onclick="location.href='FirstPage.html'">Back to Start</button>
-        <img src="images/sv.png" class="flags" alt="Swedish flag" title="Swedish" id="en" onclick="changeLanguage('en')">
-        <img src="images/en.png" class="flags" alt="English flag" title="English" id="sv" onclick="changeLanguage('sv')">
+        <button id="logoutButton" onclick="location.href='FirstPage.html'"></button>
+        <img src="images/sv.png" class="flags" alt="Swedish flag" title="Swedish" id="sv" onclick="fade('sv')">
+        <img src="images/en.png" class="flags" alt="English flag" title="English" id="en" onclick="fade('en')">
 
     </div>
+
+
 
     <!--- Content of tabs ---->
-    <div id='orderTab' class="tabContent">
+    <div id='drinksTab' class="tabContent">
         <div class="whiteSpace"></div>
-        Order
+
+        <div id="allUsers" class = "allUsers">
+        </div>
 
     </div>
 
-    <div id='customerTab' class="tabContent">
+    <div id='eventsTab' class="tabContent">
         <div class="whiteSpace"></div>
 
-        <p id ="all_user"></p>
     </div>
 
 
-    <div id='settingTab' class="tabContent">
+    <div id='aboutTab' class="tabContent">
         <div class="whiteSpace"></div>
-        setting
+
     </div>
 
 </main>
