@@ -48,13 +48,16 @@ This file is currently the css file for the first page and the login page.
 
 /* This is for the position of the login box on the LoginPage*/
 #loginbox{
-    position: absolute;
-    top: 10%;
-    left: 30%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
     width:40%;
 }
 
 #passwordLoginOption, #unameLoginOption{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
     width: 13em;
     height: 2em;
     margin-bottom: 0.5em;
@@ -66,6 +69,16 @@ This file is currently the css file for the first page and the login page.
     color:black;
 }
 
+#logintext{
+    text-align: center;
+}
+
+#loginButtons{
+    text-align: center;
+    width: 100%;
+    height: 2em;
+}
+
 /*This is the select buttons on the LoginPage*/
 .choice{
     font-family: "roboto";
@@ -75,12 +88,16 @@ This file is currently the css file for the first page and the login page.
     opacity: 0.8;
     float:left;
     margin-right:5%;
-    width:6em;
+    width:33%;
     height: 2em;
     line-height:2em;
     display: block;
     }
 
+/*positioning of the selection buttons*/
+#back{
+    margin-left: 14.5%;
+}
 
 /*The button to get back to the main menu from*/
 /*#start{
