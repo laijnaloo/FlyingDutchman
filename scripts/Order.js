@@ -17,7 +17,7 @@
  *  closure(func, image, name, price)
  */
 /***I kassan ***/
-var orderModel = {}
+var orderModel = {};
 orderModel.orders = [];
 
 function addItemToModel(name, price){
@@ -70,11 +70,44 @@ function orderView(orderModel) {
         //Create content for each drink
         createUserItemCount(div, order.count);
         createUserItemName(div, order.name);
-        createUserItemDelete(div);
+        var deleteButton = createUserItemDelete(div);
         createUserItemPrice(div, order.price);
+
+        deleteButton.onclick = closure(deleteOrderItem, name);
 
         orderContent.appendChild(div);
     }
+}
+
+//deletes the items belonging to that delete item in the order bag
+function deleteOrderItem(name){
+    alert("delete order item");
+    for (var i= 0; i < orderModel.orders.length; i++){
+        if (orderModel.orders[i].name == name){
+            //lays the object that is repeated into a variable and ends the loop
+            orderModel[i].orders = [];
+            break;
+        }
+    }
+
+    orderView(orderModel);
+}
+
+//send the users order --> resets the program
+function sendOrder(){
+    orderModel = {};
+    orderModel.orders = [];
+    historyPointer = 0;
+    orderHistory = [];
+    saveHistory();
+    orderView(orderModel);
+    calculateTotal();
+    document.getElementById('undo').style.opacity = '0.2';
+
+    //changes the display options so its nothing in the users bag
+    document.getElementById('orderWithoutItems').style.display = 'block';
+    document.getElementById('orderWithItems').style.display = 'none';
+    document.getElementById('sendOrder').style.display = 'none';
 }
 
 function addItemToOrder(name, price){
@@ -83,11 +116,9 @@ function addItemToOrder(name, price){
     document.getElementById('orderWithItems').style.display = 'block';
     document.getElementById('sendOrder').style.display = 'block';
 
-
     var newName = name;
     //tests how wide the name is
     var nameWidth = testText(name);
-
 
     if(nameWidth > 150){
         //removes letters until the name is below 190px in widht so it can fit into the order page
@@ -101,8 +132,6 @@ function addItemToOrder(name, price){
         newName = newName.slice(0, -3);
         newName = newName + "...";
     }
-
-
 
     if (orderModel.orders.length <= 5){
 
@@ -156,6 +185,7 @@ function createUserItemDelete(div){
     img.setAttribute("class", "userItemDelete");
     img.src = "images/x.png";
     div.appendChild(img);
+    return img;
 }
 
 function createUserItemPrice(div, price){

@@ -37,10 +37,10 @@ function countDrinks(change){
 	var counterNr = countNumber.innerHTML;
 
 	if (change=='-1') {
-		if (counterNr != '0') {
+		if (counterNr != '1') {
 			countNumber.innerHTML = parseInt(counterNr) - 1;
 			document.getElementById("plus").style.opacity = "1";
-			if (countNumber.innerHTML == '0') {
+			if (countNumber.innerHTML == '1') {
 				document.getElementById("minus").style.opacity = "0.5";
 			}
 		}
@@ -57,23 +57,3 @@ function countDrinks(change){
 	}
 }
 
-var loop;
-var degrees = 0;
-function rotation(idName, speed){
-	var image = document.getElementById(idName);
-
-	//set css rotation degree
-	image.style.transform = "rotate("+degrees+"deg)";
-
-	//
-	if(degrees < 180){
-		//calls the function again to make it move slowly around itself
-		loop = setTimeout('rotation(\''+idName+'\','+speed+')',speed);
-		degrees++;
-	} else {
-		degrees = 0;
-	}
-
-	document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
-
-}

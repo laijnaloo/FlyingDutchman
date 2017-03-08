@@ -2,7 +2,6 @@
  * Created by Lina Andersson on 2017-03-04.
  */
 
-
 /*
  * CONTAINS FUNCTIONS
  * toInventory()
@@ -33,7 +32,7 @@ function display_inventories_with_button(inventory){
     removeCurrentContent("drinksList");
     var drinkNr = 0;
     for (var i = 0; i < inventory.length; i++) {
-        if(inventory[i].namn != "" && inventory[i].count > 0) {
+        if(inventory[i].name != "" && inventory[i].count > 0) {
 
             //create div that contains the specific drink and all its information
             var div = document.createElement("div");
@@ -110,7 +109,6 @@ function createBuyButton(div, name, price){
     };
     div.appendChild(buyButton);
 }
-
 
 
 // run at start of page

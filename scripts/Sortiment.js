@@ -73,7 +73,7 @@ function display_inventories(inventory){
     removeCurrentContent("drinksList");
     var drinkNr = 0;
     for (var i = 0; i < inventory.length; i++){
-        if(inventory[i].namn != "" && inventory[i].count > 0) {
+        if(inventory[i].name != "" && inventory[i].count > 0) {
             var div = document.createElement("div");
             div.setAttribute("class", "drinks");
 
@@ -88,7 +88,6 @@ function display_inventories(inventory){
             var price = createBeveragePrice(div, inventory, i);
 
             //onclick a page with information about the drink appears
-            //div.setAttribute("onclick", "showDrinkInfo()");
             div.onclick = closure(showDrinkInfo, image, name, price);
 
             tabcontent.appendChild(div);
@@ -102,11 +101,9 @@ function show_beverages_alphabetical(inventory){
     if (inventory == null) {
         var temp_inventory = sessionStorage.getItem("Inventory");
         inventory = JSON.parse(temp_inventory);
-        //console.log(inventory);
     }
     inventory.sort(function(a, b){if( a.name > b.name)
         return a;});
-    //console.log(inventory);
     display_inventories(inventory);
     sortButtonsState("alph")
 }
@@ -115,9 +112,7 @@ function show_beverages_alphabetical(inventory){
 function show_beverages_random(){
     var temp_inventory = sessionStorage.getItem("Inventory");
     inventory = JSON.parse(temp_inventory);
-    // console.log(inventory);
     inventory.sort(function(a, b){return a.count - b.count});
-    //console.log(inventory);
     display_inventories(inventory);
     sortButtonsState("pop")
 }
@@ -126,9 +121,9 @@ function show_beverages_random(){
 function show_beverages_price(){
     var temp_inventory = sessionStorage.getItem("Inventory");
     inventory = JSON.parse(temp_inventory);
-    // console.log(inventory);
+
     inventory.sort(function(a, b){return a.price - b.price});
-    //console.log(inventory);
+
     display_inventories(inventory);
     sortButtonsState("price")
 }
@@ -173,6 +168,9 @@ function rotation(idName, speed){
     } else {
         //reset when finished
         degrees = 0;
+
+        //stops the setTimeout timer
+        clearTimeout(loop);
     }
 }
 

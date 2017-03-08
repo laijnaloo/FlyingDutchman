@@ -1,3 +1,5 @@
+/* these styles makes up the order page and most of it is for the order bag */
+
 #drinksList{
     width: 65%;
 }
@@ -11,7 +13,6 @@
 /*place the infodiv more to the left to make space for the order bag*/
 #recDrinkDiv {
     margin-left:22%;
-
 }
 
 .orderBox {
@@ -63,8 +64,8 @@
     font-size:1em;
     position: absolute;
     bottom: 13%;
-    left: 25%;
-    right: 25%;
+    left: 15%;
+    right: 15%;
 }
 
 .pricePara{
