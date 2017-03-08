@@ -11,10 +11,11 @@
     <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
 
 
-    <!--<script src="scripts/content.js"></script>-->
+    <script src="scripts/content.js"></script>
     <script src="scripts/Tabcontent.js"></script>
     <script src="scripts/getAllCustomers.js"></script>
     <script src="scripts/db.js"></script>
+    <script src="scripts/staffview.js"></script>
 
 
 </head>
@@ -26,9 +27,9 @@
 <main>
     <!--- Creates the tabs with links to content ---->
     <div class="tabs" id="tabs">
-        <a href="javascript:void(0)" class="tabTitle" id="Drinks" onclick="openTab(event, 'drinksTab', 'Drinks')">Customers</a>
-        <a href="javascript:void(0)" class="tabTitle" id="Events" onclick="openTab(event, 'eventsTab', 'Drinks')">Collection</a>
-        <a href="javascript:void(0)" class="tabTitle" id="About" onclick="openTab(event, 'aboutTab', 'Drinks')">Settings</a>
+        <a href="javascript:void(0)" class="tabTitle" id="Customers" onclick="openTab(event, 'customerTab', 'Drinks')">Customers</a>
+        <a href="javascript:void(0)" class="tabTitle" id="Collection" onclick="openTab(event, 'collectionTab', 'Drinks')">Collection</a>
+        <a href="javascript:void(0)" class="tabTitle" id="Settings" onclick="openTab(event, 'settingsTab', 'Drinks')">Settings</a>
     </div>
     <div id="language">
         <button id="logoutButton" onclick="location.href='FirstPage.html'"></button>
@@ -40,7 +41,7 @@
 
 
     <!--- Content of tabs ---->
-    <div id='drinksTab' class="tabContent">
+    <div id='customerTab' class="tabContent">
         <div class="whiteSpace"></div>
 
         <div id="allUsers" class = "allUsers">
@@ -48,13 +49,13 @@
 
     </div>
 
-    <div id='eventsTab' class="tabContent">
+    <div id='collectionTab' class="tabContent">
         <div class="whiteSpace"></div>
 
     </div>
 
 
-    <div id='aboutTab' class="tabContent">
+    <div id='settingsTab' class="tabContent">
         <div class="whiteSpace"></div>
 
     </div>

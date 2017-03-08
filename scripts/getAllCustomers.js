@@ -17,7 +17,6 @@ function init() {
 function createUserName(divID, inventory, i){
     var name = document.createElement("P");
     name.setAttribute("class", "name");
-    //Give the names a new fontsize and fontfamily so it differs from the price
     name.style.fontSize = "1.2em";
     name.style.fontFamily = "roboto";
     name.style.color = "#76a3b6";
@@ -38,12 +37,13 @@ function createUserAssets(divID, allUsers, i) {
 
 
 function printUsers(allUsers) {
-    //removeCurrentContent("allUsers");
+
     var tabcontent = document.getElementById("allUsers");
     for (var i = 0; i < allUsers.length; i++){
         if(allUsers[i].first_name != "") {
             var div = document.createElement("div");
             div.setAttribute("class", "users");
+            div.setAttribute("onclick", "editUser()");
             div.style.borderRadius = "5px";
             div.style.borderStyle = "solid";
             div.style.borderColor = "#76a3b6";
