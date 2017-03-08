@@ -76,7 +76,7 @@ function writeData(lang) {
     getData("login",lang,"#loginButton","data/firstpage.txt");
     getData("stafflogin",lang,"#staffLogintext","data/firstpage.txt");
 
-    // Collection page
+    // Sortiment and order page
 
     getData("drinks",lang,"#Drinks","data/tabs.txt");
     getData("events",lang,"#Events","data/tabs.txt");
@@ -86,6 +86,12 @@ function writeData(lang) {
     getData("pop",lang,"#pop","data/tabs.txt");
     getData("price",lang,"#price","data/tabs.txt");
 
+    getData("orderHeader",lang,"#orderHeader","data/tabs.txt");
+    getData("noOrderText",lang,"#noItemsText","data/tabs.txt");
+    getData("sendOrder",lang,"#sendOrder","data/tabs.txt");
+    getData("recDrinkBuy",lang,"#recDrinkBuy","data/tabs.txt");
+
+    // The Events and about page
     if(lang =='en') {
         getFile("data/aboutEn.txt", "#aboutFlying");
         getFile("data/singingFarmersEn.txt","#singingFarmers");

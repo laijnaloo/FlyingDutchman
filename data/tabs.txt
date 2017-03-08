@@ -1,1 +1,1 @@
-drinks,Drycker,Drinks;events,Evenemang,Events;about,Om oss,About us;back,Tillbaka till start,Back to start;price,Pris,Price;pop,Populäritet,Popularity;
+drinks,Drycker,Drinks;events,Evenemang,Events;about,Om oss,About us;back,Tillbaka till start,Back to start;price,Pris,Price;pop,Populäritet,Popularity;orderHeader,Din Beställning,Your Order;noOrderText,Välj något att köpa!,Choose something to buy!;sendOrder,Sänd beställning,Send order;recDrinkBuy,Lägg Beställning,Place order;
