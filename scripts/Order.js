@@ -73,7 +73,7 @@ function orderView(orderModel) {
         var deleteButton = createUserItemDelete(div);
         createUserItemPrice(div, order.price);
 
-        deleteButton.onclick = closure(deleteOrderItem, name);
+        deleteButton.onclick = closure(deleteOrderItem, order.name);
 
         orderContent.appendChild(div);
     }
@@ -82,10 +82,11 @@ function orderView(orderModel) {
 //deletes the items belonging to that delete item in the order bag
 function deleteOrderItem(name){
     alert("delete order item");
+    console.log("i deleteorder");
     for (var i= 0; i < orderModel.orders.length; i++){
         if (orderModel.orders[i].name == name){
             //lays the object that is repeated into a variable and ends the loop
-            orderModel[i].orders = [];
+            orderModel.orders[i] = null;
             break;
         }
     }

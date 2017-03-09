@@ -32,7 +32,7 @@ function display_inventories_with_button(inventory){
     removeCurrentContent("drinksList");
     var drinkNr = 0;
     for (var i = 0; i < inventory.length; i++) {
-        if(inventory[i].name != "" && inventory[i].count > 0) {
+        if(inventory[i].namn != "" && inventory[i].count > 0) {
 
             //create div that contains the specific drink and all its information
             var div = document.createElement("div");
@@ -71,11 +71,11 @@ function show_beverages_alphabetical_w_button(){
     var temp_inventory = sessionStorage.getItem("Inventory");
     inventory = JSON.parse(temp_inventory);
     //console.log(inventory);
-    inventory.sort(function(a, b){if( a.name > b.name)
+    inventory.sort(function(a, b){if( a.namn > b.namn)
         return a;});
     //console.log(inventory);
     display_inventories_with_button(inventory);
-    sortButtonsState("alph")
+    sortButtonsState("alph");
 }
 
 // sort the inventory list after amount in stock
@@ -86,7 +86,7 @@ function show_beverages_random_w_button(){
     inventory.sort(function(a, b){return a.count - b.count});
     //console.log(inventory);
     display_inventories_with_button(inventory);
-    sortButtonsState("pop")
+    sortButtonsState("pop");
 }
 
 // sort the inventory list after lowest price
@@ -97,7 +97,7 @@ function show_beverages_price_w_button(){
     inventory.sort(function(a, b){return a.price - b.price});
     //console.log(inventory);
     display_inventories_with_button(inventory);
-    sortButtonsState("price")
+    sortButtonsState("price");
 }
 //creates a buy button below all the drinks on the order page
 function createBuyButton(div, name, price){
