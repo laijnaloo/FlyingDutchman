@@ -82,16 +82,18 @@ function orderView(orderModel) {
 //deletes the items belonging to that delete item in the order bag
 function deleteOrderItem(name){
     alert("delete order item");
-    console.log("i deleteorder");
     for (var i= 0; i < orderModel.orders.length; i++){
         if (orderModel.orders[i].name == name){
             //lays the object that is repeated into a variable and ends the loop
-            orderModel.orders[i] = null;
+
+            orderModel.orders.splice(i, 1);
+
             break;
         }
     }
 
     orderView(orderModel);
+    calculateTotal();
 }
 
 //send the users order --> resets the program
