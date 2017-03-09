@@ -111,61 +111,61 @@ function getFile(file,place){
  * @param lang - the language that are set for the webpage
  */
 function writeData(lang) {
-    // Sets the welcome text on the first page
+    // FIRST PAGE: Sets the welcome text on the first page
     getData("welcome-string",lang,"#welcome","data/firstpage.txt");
 
-    //Sets the sortiment button on the first page
+    // FIRST PAGE: Sets the sortiment button on the first page
     getData("sort",lang,"#sortiment","data/firstpage.txt");
 
-    // sets the login button on the first page
+    // FIRST PAGE: sets the login button on the first page
     getData("login",lang,"#login","data/firstpage.txt");
 
-    //Sets the login text on the login page
+    // LOGIN PAGE: Sets the login text on the login page
     getData("login",lang,"#logintext","data/firstpage.txt");
 
-    // Sets the back button on the login page
+    // LOGIN: PAGE: Sets the back button on the login page
     getData("back",lang,"#back","data/firstpage.txt");
 
-    // sets the loginbutton on the login page
+    // LOGIN PAGE: sets the loginbutton on the login page
     getData("login",lang,"#loginButton","data/firstpage.txt");
 
-    // Sets the Drink tab
+    // SORTIMENT/ORDER PAGE: Sets the Drink tab
     getData("drinks",lang,"#Drinks","data/tabs.txt");
 
-    // set the Event tab
+    // SORTIMENT/ORDER PAGE:set the Event tab
     getData("events",lang,"#Events","data/tabs.txt");
 
-    // set the about tab
+    // SORTIMENT/ORDER PAGE: set the about tab
     getData("about",lang,"#About","data/tabs.txt");
 
-    // set the logout button
+    // SORTIMENT/ORDER PAGE: set the logout button
     getData("back",lang,"#logoutButton","data/tabs.txt");
 
-    // set the popularity sort-button
+    // SORTIMENT/ORDER PAGE:set the popularity sort-button
     getData("pop",lang,"#pop","data/tabs.txt");
 
-    // Set the price sort-button
+    // SORTIMENT/ORDER PAGE: Set the price sort-button
     getData("price",lang,"#price","data/tabs.txt");
 
-    // set the header in the order box
+    // ORDER PAGE: set the header in the order box
     getData("orderHeader",lang,"#orderHeader","data/tabs.txt");
 
-    // set the text in the order box
+    // ORDER PAGE: set the text in the order box
     getData("noOrderText",lang,"#noItemsText","data/tabs.txt");
 
-    // set the text in the send order box
+    // ORDER PAGE: set the text in the send order box
     getData("sendOrder",lang,"#sendOrder","data/tabs.txt");
 
-    // set the text in the put order window
+    // ORDER PAGE: set the text in the put order window
     getData("recDrinkBuy",lang,"#recDrinkBuy","data/tabs.txt");
 
-    // set the text in the customer tab
+    // STAFF PAGE: set the text in the customer tab
     getData("customer",lang,"#Customers","data/tabs.txt");
 
-    // set the text in the collection tab
+    // STAFF PAGE: set the text in the collection tab
     getData("sort",lang,"#Collection","data/firstpage.txt");
 
-    // set the text in the setting tab
+    // STAFF PAGE: set the text in the setting tab
     getData("setting",lang,"#Settings","data/tabs.txt");
 
     // This set the english content of the about page and the 3 different events
