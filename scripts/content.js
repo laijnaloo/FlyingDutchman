@@ -29,6 +29,7 @@ $(document).ready(function(){
         lang = localStorage.getItem("language");
         writeData(lang);
         setPlaceholder();
+        fade(lang);
     });
 
     // If the English flag is clicked, then the content will be written in English on the website.
@@ -37,6 +38,7 @@ $(document).ready(function(){
         lang = localStorage.getItem("language");
         writeData(lang);
         setPlaceholder();
+        fade(lang);
     });
 });
 
@@ -156,6 +158,15 @@ function writeData(lang) {
 
     // set the text in the put order window
     getData("recDrinkBuy",lang,"#recDrinkBuy","data/tabs.txt");
+
+    // set the text in the customer tab
+    getData("customer",lang,"#Customers","data/tabs.txt");
+
+    // set the text in the collection tab
+    getData("sort",lang,"#Collection","data/firstpage.txt");
+
+    // set the text in the setting tab
+    getData("setting",lang,"#Settings","data/tabs.txt");
 
     // This set the english content of the about page and the 3 different events
     if(lang =='en') {
