@@ -73,7 +73,7 @@ function display_inventories(inventory){
     removeCurrentContent("drinksList");
     var drinkNr = 0;
     for (var i = 0; i < inventory.length; i++){
-        if(inventory[i].name != "" && inventory[i].count > 0) {
+        if(inventory[i].namn != "" && inventory[i].count > 0) {
             var div = document.createElement("div");
             div.setAttribute("class", "drinks");
 
