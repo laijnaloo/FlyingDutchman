@@ -4,19 +4,33 @@
 <head>
     <title>The flying Dutchman</title>
     <meta charset="UTF-8">
+
     <link rel="stylesheet" type="text/css" href="General.css">
+    <link rel="stylesheet" type="text/css" href="Drinks.css">
     <link rel="stylesheet" type="text/css" href="tabs.css">
+    <link rel="stylesheet" type="text/css" href="SortimentContent.css">
+    <link rel="stylesheet" type="text/css" href="eventPage.css">
+    <link rel="stylesheet" type="text/css" href="infoPage.css">
+    <link rel="stylesheet" type="text/css" href="orderingContent.css">
+    <link rel="stylesheet" type="text/css" href="orderPageTest.css">
+
     <link rel="stylesheet" type="text/css" href="staffView.css">
-
+    
     <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-
-
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="scripts/orderPageTest.js"></script>
+    <script src="scripts/orderPageTest.js"></script>
+    <script src="scripts/Sortiment.js"></script>
     <script src="scripts/content.js"></script>
     <script src="scripts/Tabcontent.js"></script>
-    <script src="scripts/getAllCustomers.js"></script>
+    <script src="scripts/orderBoxScroll.js"></script>
     <script src="scripts/db.js"></script>
-    <script src="scripts/staffview.js"></script>
+    <script src="scripts/DragAndDrop.js"></script>
+    <script src="scripts/undo.js"></script>
+    <script src="scripts/Order.js"></script>
 
+    <script src="scripts/getAllCustomers.js"></script>
+    <script src="scripts/staffview.js"></script>
 
 </head>
 
@@ -51,6 +65,89 @@
 
     <div id='collectionTab' class="tabContent">
         <div class="whiteSpace"></div>
+
+        <div id="inventoryPage">
+            <div id="sortButtonOrder">
+                <input type="button" id="alph" value ="A-Ö" class="sortButtonOrder" onclick="show_beverages_alphabetical()">
+                <button id="price" class="sortButtonOrder rightButtons" onclick="show_beverages_price()">
+                    <button id="pop" class="sortButtonOrder rightButtons" onclick="show_beverages_random()">
+            </div>
+
+            <div id="drinksList" class="drinks">
+
+            </div>
+
+        </div>
+        <div id='orderBox' class="orderBox">
+            <div id="currentUser" class="currentUser">
+
+            </div>
+            <h3 id="orderHeader"></h3>
+            <div id="orderContent" class="orderContent">
+                <img id="dragNdrop" src="images/dragNdrop.png">
+
+                <!--- Users order --->
+                <div id="userOrder">
+                    <div id="undoRedoButtons">
+                        <img id="redo" class="undoRedoImages" onclick="undoRedo(1)" src="images/redo.png">
+                        <img id="undo" class="undoRedoImages" onclick="undoRedo(-1)"src="images/undo.png">
+                    </div>
+
+                    <div id="orderWithItems">
+                        <!--- All the items the user have chosen--->
+                        <div id="usersChosenItems"></div>
+
+                        <!---The total price for the order--->
+                        <br>
+                        <div id="totalPriceDiv">
+                            <p id="totalText" class="userTotalText userItemText">Total:</p>
+                            <p id="totalPrice" class="userTotalText userItemText">55.99 kr</p>
+                        </div>
+                    </div>
+
+                    <div id="orderWithoutItems">
+                        <p id="noItemsText"></p>
+
+                    </div>
+
+
+                    <button id="sendOrder" onclick="sendOrder()">Send order</button>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <!--- show info about a specific drink --->
+        <div id="infoPage">
+            <img src="images/leftArrow.png" id="leftArrow" onclick="toInventory()">
+
+
+            <section id="recDrinkDiv">
+                <img src="images/Beer.png" id="recDrink">
+
+
+                <section id="recText">
+                    <h3 id="recDrinkName">This is beer</h3>
+                    <h3 id="recDrinkPrice">22 KR</h3>
+
+                    <p class="counterText" id="nrOfDrinks">Number of drinks</p>
+                    <div id="drinkCounter">
+                        <img class="counterImages" id="minus" onclick="countDrinks('-1')" src="images/minus.png">
+
+                        <img class="counterImages" id="plus" onclick="countDrinks('1')" src="images/plus.png">
+                        <p class="counterText" id="countNumber"> 2 </p>
+
+
+                    </div>
+                    <button id="recDrinkBuy"><p id="recDrinkBuyText"></p></button>
+                </section>
+            </section>
+
+
+        </div>
+    </div>
 
     </div>
 
