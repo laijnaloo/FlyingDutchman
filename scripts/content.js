@@ -159,6 +159,9 @@ function writeData(lang) {
     // ORDER PAGE: set the text in the put order window
     getData("recDrinkBuy",lang,"#recDrinkBuy","data/tabs.txt");
 
+    // ORDER/STAFF PAGE: set the nr of drinks text
+    getData("nrOfDrinks",lang,"#nrOfDrinks","data/tabs.txt");
+
     // STAFF PAGE: set the text in the customer tab
     getData("customer",lang,"#Customers","data/tabs.txt");
 
