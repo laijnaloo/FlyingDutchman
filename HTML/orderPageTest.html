@@ -4,33 +4,28 @@
 <head>
     <title>The flying Dutchman</title>
     <meta charset="UTF-8">
-
-    <link rel="stylesheet" type="text/css" href="General.css">
-    <link rel="stylesheet" type="text/css" href="Drinks.css">
-    <link rel="stylesheet" type="text/css" href="tabs.css">
-    <link rel="stylesheet" type="text/css" href="SortimentContent.css">
-    <link rel="stylesheet" type="text/css" href="eventPage.css">
-    <link rel="stylesheet" type="text/css" href="infoPage.css">
-    <link rel="stylesheet" type="text/css" href="orderingContent.css">
-    <link rel="stylesheet" type="text/css" href="orderPageTest.css">
-
-    <link rel="stylesheet" type="text/css" href="staffView.css">
+    <link rel="stylesheet" type="text/css" href="../css/General.css">
+    <link rel="stylesheet" type="text/css" href="../css/Drinks.css">
+    <link rel="stylesheet" type="text/css" href="../css/tabs.css">
+    <link rel="stylesheet" type="text/css" href="../css/SortimentContent.css">
+    <link rel="stylesheet" type="text/css" href="../css/eventPage.css">
+    <link rel="stylesheet" type="text/css" href="../css/infoPage.css">
+    <link rel="stylesheet" type="text/css" href="../css/orderingContent.css">
+    <link rel="stylesheet" type="text/css" href="../css/orderPageTest.css">
 
     <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <script src="scripts/orderPageTest.js"></script>
-    <script src="scripts/orderPageTest.js"></script>
-    <script src="scripts/Sortiment.js"></script>
-    <script src="scripts/content.js"></script>
-    <script src="scripts/Tabcontent.js"></script>
-    <script src="scripts/orderBoxScroll.js"></script>
-    <script src="scripts/db.js"></script>
-    <script src="scripts/DragAndDrop.js"></script>
-    <script src="scripts/undo.js"></script>
-    <script src="scripts/Order.js"></script>
 
-    <script src="scripts/getAllCustomers.js"></script>
-    <script src="scripts/staffview.js"></script>
+    <script src="../scripts/orderPageTest.js"></script>
+    <script src="../scripts/orderPageTest.js"></script>
+    <script src="../scripts/Sortiment.js"></script>
+    <script src="../scripts/content.js"></script>
+    <script src="../scripts/Tabcontent.js"></script>
+    <script src="../scripts/orderBoxScroll.js"></script>
+    <script src="../scripts/db.js"></script>
+    <script src="../scripts/DragAndDrop.js"></script>
+    <script src="../scripts/undo.js"></script>
+    <script src="../scripts/Order.js"></script>
 
 </head>
 
@@ -41,9 +36,9 @@
 <main>
     <!--- Creates the tabs with links to content ---->
     <div class="tabs" id="tabs">
-        <a href="javascript:void(0)" class="tabTitle" id="Customers" onclick="openTab(event, 'customerTab', 'Drinks')">Customers</a>
-        <a href="javascript:void(0)" class="tabTitle" id="Collection" onclick="openTab(event, 'collectionTab', 'Drinks')">Collection</a>
-        <a href="javascript:void(0)" class="tabTitle" id="Settings" onclick="openTab(event, 'settingsTab', 'Drinks')">Settings</a>
+        <a href="javascript:void(0)" class="tabTitle" id="Drinks" onclick="openTab(event, 'drinksTab', 'Drinks')"> Drinks </a>
+        <a href="javascript:void(0)" class="tabTitle" id="Events" onclick="openTab(event, 'eventsTab', 'Drinks')"> Events </a>
+        <a href="javascript:void(0)" class="tabTitle" id="About" onclick="openTab(event, 'aboutTab', 'Drinks')">About </a>
     </div>
     <div id="language">
         <button id="logoutButton" onclick="location.href='FirstPage.html'"></button>
@@ -55,22 +50,13 @@
 
 
     <!--- Content of tabs ---->
-    <div id='customerTab' class="tabContent">
+    <div id='drinksTab' class="tabContent">
         <div class="whiteSpace"></div>
-
-        <div id="allUsers" class = "allUsers">
-        </div>
-
-    </div>
-
-    <div id='collectionTab' class="tabContent">
-        <div class="whiteSpace"></div>
-
         <div id="inventoryPage">
             <div id="sortButtonOrder">
                 <input type="button" id="alph" value ="A-Ö" class="sortButtonOrder" onclick="show_beverages_alphabetical()">
                 <button id="price" class="sortButtonOrder rightButtons" onclick="show_beverages_price()">
-                    <button id="pop" class="sortButtonOrder rightButtons" onclick="show_beverages_random()">
+                <button id="pop" class="sortButtonOrder rightButtons" onclick="show_beverages_random()">
             </div>
 
             <div id="drinksList" class="drinks">
@@ -128,11 +114,11 @@
                 <img src="images/Beer.png" id="recDrink">
 
 
-                <section id="recText">
-                    <h3 id="recDrinkName">This is beer</h3>
-                    <h3 id="recDrinkPrice">22 KR</h3>
+            <section id="recText">
+                <h3 id="recDrinkName">This is beer</h3>
+                <h3 id="recDrinkPrice">22 KR</h3>
 
-                    <p class="counterText" id="nrOfDrinks">Number of drinks</p>
+                    <p class="counterText" id="nrOfDrinks"></p>
                     <div id="drinkCounter">
                         <img class="counterImages" id="minus" onclick="countDrinks('-1')" src="images/minus.png">
 
@@ -149,12 +135,25 @@
         </div>
     </div>
 
+    <div id='eventsTab' class="tabContent">
+        <div class="whiteSpace"></div>
+        <h3 class="pageHeader">Upcoming events</h3>
+        <div class="contentDiv">
+            <div class ="events" id = "singingFarmers"></div>
+            <div class="events" id ="beerTasting"></div>
+            <div class="events" id ="ladiesNight"></div>
+        </div>
     </div>
 
 
-    <div id='settingsTab' class="tabContent">
+    <div id='aboutTab' class="tabContent">
         <div class="whiteSpace"></div>
 
+        <div class="contentDiv">
+            <h3 class="pageHeader">The Flying Dutchman</h3>
+            <p id="aboutFlying" class="contentText"> </p>
+            <img id="logo" src="images/logo2.png">
+        </div>
     </div>
 
 </main>
@@ -163,7 +162,7 @@
 </body>
 <script>
     // Shows the content of beer when starting page
-    document.getElementById("Customers").click();
+    document.getElementById("Drinks").click();
 </script>
 
 </html>
