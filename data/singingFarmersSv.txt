@@ -1,5 +1,5 @@
 <h4 class="contentHeader">The singning farmers</h4>
-<img class="eventpic" src="images/eventpic.JPG">
+<img class="eventpic" src="../images/eventpic.JPG">
 <p class="contentText">
 
 På söndag den 3 mars lokalt band singning bönder kommer att ansluta oss här i flygande holländaren och spela oss några låtar.

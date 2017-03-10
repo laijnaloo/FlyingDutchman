@@ -1,5 +1,5 @@
 <h4 class="contentHeader">Girls Night</h4>
-<img class="eventpic" src="images/eventpic3_ladies.jpg">
+<img class="eventpic" src="../images/eventpic3_ladies.jpg">
 <p class="contentText">
 Girls night out kommer till den flygande holländaren! Den 10 maj kommer att bli en damer endast för natten.
 Klassisk musik, rosa drinkar och en överraskning band kommer att dyka upp här evening.No män tillåts
