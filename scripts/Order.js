@@ -186,7 +186,7 @@ function createUserItemName(div, name){
 function createUserItemDelete(div){
     var img = document.createElement("IMG");
     img.setAttribute("class", "userItemDelete");
-    img.src = "images/x.png";
+    img.src = "../images/x.png";
     div.appendChild(img);
     return img;
 }

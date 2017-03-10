@@ -18,7 +18,7 @@ function removeCurrentContent(ID){
 }
 
 function randomImg(){
-    var images = ["images/Beer.png", "images/cider.png"];
+    var images = ["../images/Beer.png", "../images/cider.png"];
     var randomNumber = Math.random() * 10;
     if (randomNumber<5){
         return images[0];
