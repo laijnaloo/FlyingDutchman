@@ -81,7 +81,6 @@ function orderView(orderModel) {
 
 //deletes the items belonging to that delete item in the order bag
 function deleteOrderItem(name){
-    alert("delete order item");
     for (var i= 0; i < orderModel.orders.length; i++){
         if (orderModel.orders[i].name == name){
             //lays the object that is repeated into a variable and ends the loop
@@ -159,7 +158,6 @@ function changeButtonOpacity(){
         }
         //popup telling the user what happend when there are to many different drinks.
         //Starts after 1 millisec to make the drink name visible before the popup appears
-        setTimeout(function() {alert("You can only order 5 different drinks")}, 0.1);
 
     }else{
         //makes all buttons fully colored
