@@ -9,7 +9,6 @@ var inventory;
 // clears content for sorting
 function removeCurrentContent(ID){
     var content = document.getElementById(ID);
-    //console.log(content);
     if (content.hasChildNodes()) {
         for (var i = 0; i < content.childElementCount; i++) {
             content.removeChild(content.childNodes[i]);
@@ -17,19 +16,20 @@ function removeCurrentContent(ID){
     }
 }
 
+//Select one of the images randomly
 function randomImg(){
-    var images = ["../images/Beer.png", "../images/cider.png"];
-    var randomNumber = Math.random() * 10;
+    var images = ["../images/Beer.png", "../images/cider.png"]; //the two possible images
+    var randomNumber = Math.random() * 10; //creates a random number somewhere between 0 and 10
     if (randomNumber<5){
         return images[0];
-    }
-    else{
+    } else{
         return images[1];
     }
 }
 
+//append the image to the drinks div
 function insertImage(divID){
-    var source = randomImg();
+    var source = randomImg(); //Create a random img
     var img = document.createElement("IMG");
     img.setAttribute("class", "drinkPic");
     img.src = source;
@@ -37,6 +37,7 @@ function insertImage(divID){
     return source;
 }
 
+//Create beverage name and append it to the drinks div
 function createBeverageName(divID, inventory, i){
     var name = document.createElement("P");
     name.setAttribute("class", "namePara");
@@ -46,7 +47,9 @@ function createBeverageName(divID, inventory, i){
     return name_text;
 }
 
+//Create beverage price and append it to the drinks div
 function createBeveragePrice(divID, inventory, i) {
+    //create new "p" object
     var price = document.createElement("P");
     price.setAttribute("class", "pricePara");
     var price_text = document.createTextNode(inventory[i].price);
@@ -55,14 +58,14 @@ function createBeveragePrice(divID, inventory, i) {
     return inventory[i].price;
 }
 
-//
+//Creates a related function
 function closure(func, image, name, price) {
     return function() {
         func(image, name, price);
     }
 }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  // display inventory in HTML
+// display inventory in HTML
 function display_inventories(inventory){
     var tabcontent = document.getElementById("drinksList");
 
@@ -94,34 +97,32 @@ function display_inventories(inventory){
 
 // sort the inventory list alphabetically
 function show_beverages_alphabetical(inventory){
-    if (inventory == null) {
+    if (inventory == null) { //get the inventory from session storage
         var temp_inventory = sessionStorage.getItem("Inventory");
         inventory = JSON.parse(temp_inventory);
     }
-    inventory.sort(function(a, b){if( a.namn > b.namn)
+    inventory.sort(function(a, b){if( a.namn > b.namn) //sort function
         return a;});
-    display_inventories(inventory);
-    sortButtonsState("alph")
+    display_inventories(inventory); //create the inventory in html
+    sortButtonsState("alph");
 }
 
 // sort the inventory list after amount in stock
 function show_beverages_random(){
-    var temp_inventory = sessionStorage.getItem("Inventory");
+    var temp_inventory = sessionStorage.getItem("Inventory"); //get the inventory from session storage
     inventory = JSON.parse(temp_inventory);
-    inventory.sort(function(a, b){return a.count - b.count});
-    display_inventories(inventory);
-    sortButtonsState("pop")
+    inventory.sort(function(a, b){return a.count - b.count});//sort function
+    display_inventories(inventory);//create the inventory in html
+    sortButtonsState("pop");
 }
 
 // sort the inventory list after lowest price
 function show_beverages_price(){
-    var temp_inventory = sessionStorage.getItem("Inventory");
+    var temp_inventory = sessionStorage.getItem("Inventory"); //get the inventory from session storage
     inventory = JSON.parse(temp_inventory);
-
-    inventory.sort(function(a, b){return a.price - b.price});
-
-    display_inventories(inventory);
-    sortButtonsState("price")
+    inventory.sort(function(a, b){return a.price - b.price});//sort function
+    display_inventories(inventory);//create the inventory in html
+    sortButtonsState("price");
 }
 
 //show page with more info about the drink

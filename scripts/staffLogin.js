@@ -27,7 +27,7 @@ function login() {
             location = "staffView.html";
         } else {
 
-            alert("Invalid username or password"); //Göra ngt snyggt kanske
+            alert("Invalid username or password");
         }
 
     });

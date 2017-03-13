@@ -1,4 +1,3 @@
-
 //Created by Anna
 function openTab(event, title, linkTitle){
 	var tabcontent, tablinks;
@@ -24,7 +23,6 @@ function openTab(event, title, linkTitle){
 
 function countDrinks(change){
 	var counterNr = countNumber.innerHTML;
-
 	if (change=='-1') {
 		if (counterNr != '1') {
 			countNumber.innerHTML = parseInt(counterNr) - 1;
@@ -33,7 +31,6 @@ function countDrinks(change){
 				document.getElementById("minus").style.opacity = "0.5";
 			}
 		}
-
 	} else {
 		if (counterNr != '9') {
 			countNumber.innerHTML = parseInt(counterNr) + 1;
