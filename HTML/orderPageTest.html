@@ -15,11 +15,9 @@
 
     <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
-    <script src="../scripts/orderPageTest.js"></script>
+    <script src="../scripts/content.js"></script>
     <script src="../scripts/orderPageTest.js"></script>
     <script src="../scripts/Sortiment.js"></script>
-    <script src="../scripts/content.js"></script>
     <script src="../scripts/Tabcontent.js"></script>
     <script src="../scripts/orderBoxScroll.js"></script>
     <script src="../scripts/db.js"></script>
@@ -36,7 +34,7 @@
 <main>
     <!--- Creates the tabs with links to content ---->
     <div class="tabs" id="tabs">
-        <a href="javascript:void(0)" class="tabTitle" id="Drinks" onclick="openTab(event, 'drinksTab', 'Drinks')"> Drinks </a>
+        <a href="javascript:void(0)" class="tabTitle" id="Drinks" onclick="openTab(event, 'drinksTab', 'Drinks')">Drinks  </a>
         <a href="javascript:void(0)" class="tabTitle" id="Events" onclick="openTab(event, 'eventsTab', 'Drinks')"> Events </a>
         <a href="javascript:void(0)" class="tabTitle" id="About" onclick="openTab(event, 'aboutTab', 'Drinks')">About </a>
     </div>
@@ -65,9 +63,7 @@
 
         </div>
         <div id='orderBox' class="orderBox">
-            <div id="currentUser" class="currentUser">
-
-            </div>
+            <div id="currentUser" class="currentUser"></div>
             <h3 id="orderHeader"></h3>
             <div id="orderContent" class="orderContent">
                 <img id="dragNdrop" src="../images/dragNdrop.png">
@@ -97,7 +93,7 @@
                     </div>
 
 
-                    <button id="sendOrder" onclick="sendOrder()">Send order</button>
+                    <button id="sendOrder" onclick="sendOrder()"></button>
 
 
                 </div>
@@ -137,7 +133,7 @@
 
     <div id='eventsTab' class="tabContent">
         <div class="whiteSpace"></div>
-        <h3 class="pageHeader">Upcoming events</h3>
+        <h3 class="pageHeader" id="upComingEvents">Upcoming events</h3>
         <div class="contentDiv">
             <div class ="events" id = "singingFarmers"></div>
             <div class="events" id ="beerTasting"></div>

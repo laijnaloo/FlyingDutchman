@@ -77,11 +77,12 @@ function getData(string,language,place,file) {
                     //If the language is english then we will write the 3rd element, which is the english translation
                     if (language == "en") {
                         $(place).html(option[2]);
+                        return option[2];
                         }
                         // Otherwise we write the swedish translation, which is on the 2nd element.
                         else {
                             $(place).html(option[1]);
-
+                            return option[1];
                         }
                     }
                 }
@@ -138,6 +139,10 @@ function writeData(lang) {
     // SORTIMENT/ORDER PAGE: set the about tab
     getData("about",lang,"#About","../data/tabs.txt");
 
+    // SORTIMENT/ORDER PAGE: set the upcoming event title
+
+    getData("upcoming", lang,"#upComingEvents","../data/tabs.txt");
+
     // SORTIMENT/ORDER PAGE: set the logout button
     getData("back",lang,"#logoutButton","../data/tabs.txt");
 
@@ -149,6 +154,9 @@ function writeData(lang) {
 
     // ORDER PAGE: set the header in the order box
     getData("orderHeader",lang,"#orderHeader","../data/tabs.txt");
+
+    // ORDER PAGE: set the place order button
+    getData("place",lang,"#placeOrder","../data/tabs.txt");
 
     // ORDER PAGE: set the text in the order box
     getData("noOrderText",lang,"#noItemsText","../data/tabs.txt");
