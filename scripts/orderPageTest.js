@@ -103,7 +103,17 @@ function show_beverages_price_w_button(){
 function createBuyButton(div, name, price){
     var buyButton = document.createElement("BUTTON");
     buyButton.setAttribute("class", "orderButton");
-    buyButton.innerHTML = "Place Order"
+    //buyButton.setAttribute("id","price");
+
+    var lang = localStorage.getItem("language");
+    if (lang == 'sv'){
+        buyButton.innerHTML = "Lägg beställning"
+
+    }else{
+        buyButton.innerHTML = "Place Order"
+
+    }
+    //buyButton.innerHTML = "Place Order"
     div.onclick = function(){
         addItemToOrder(name, price);
     };
@@ -117,7 +127,15 @@ function displayCurrentUser() {
         var firstName = sessionStorage.getItem("Firstname");
         var lastName = sessionStorage.getItem("Lastname");
         var assets = sessionStorage.getItem("Assets");
-        document.getElementById("currentUser").innerText = firstName + " " + lastName + "\n Saldo: " + assets;
+
+        var lang = localStorage.getItem("language");
+        var saldotext;
+        if (lang =='sv'){
+            saldotext = "Saldo: ";
+        }else{
+            saldotext = "Balance: ";
+        }
+        document.getElementById("currentUser").innerText = firstName + " " + lastName + "\n"+saldotext + assets;
     }
 
 }

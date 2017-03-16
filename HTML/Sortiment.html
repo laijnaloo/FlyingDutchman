@@ -4,18 +4,18 @@
 <head>
     <title>The flying Dutchman</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="General.css">
-    <link rel="stylesheet" type="text/css" href="Drinks.css">
-    <link rel="stylesheet" type="text/css" href="tabs.css">
-    <link rel="stylesheet" type="text/css" href="SortimentContent.css">
-	<link rel="stylesheet" type="text/css" href="eventPage.css">
-	<link rel="stylesheet" type="text/css" href="infoPage.css">
+    <link rel="stylesheet" type="text/css" href="../css/General.css">
+    <link rel="stylesheet" type="text/css" href="../css/Drinks.css">
+    <link rel="stylesheet" type="text/css" href="../css/tabs.css">
+    <link rel="stylesheet" type="text/css" href="../css/SortimentContent.css">
+	<link rel="stylesheet" type="text/css" href="../css/eventPage.css">
+	<link rel="stylesheet" type="text/css" href="../css/infoPage.css">
 
-	<script src="scripts/jquery-3.1.1.js"></script>
-	<script src="scripts/content.js"></script>
-    <script src="scripts/Tabcontent.js"></script>
-	<script src="scripts/Sortiment.js"></script>
-	<script src="scripts/db.js"></script>
+	<script src="../scripts/jquery-3.1.1.js"></script>
+	<script src="../scripts/content.js"></script>
+    <script src="../scripts/Tabcontent.js"></script>
+	<script src="../scripts/Sortiment.js"></script>
+	<script src="../scripts/db.js"></script>
 </head>
 
 <body>
@@ -29,8 +29,8 @@
 	</div>
 	<div id="language">
 		<button id="logoutButton" onclick="location.href='FirstPage.html'"></button>
-		<img src="images/sv.png" class="flags" alt="Swedish flag" title="Swedish" id="sv" onclick="fade('sv')">
-		<img src="images/en.png" class="flags" alt="English flag" title="English" id="en" onclick="fade('en')">
+		<img src="../images/sv.png" class="flags" alt="Swedish flag" title="Swedish" id="sv" onclick="fade('sv')">
+		<img src="../images/en.png" class="flags" alt="English flag" title="English" id="en" onclick="fade('en')">
 
 	</div>
 
@@ -50,11 +50,11 @@
 
 		<!--- show info about a specific drink --->
 		<div id="infoPage">
-			<img src="images/leftArrow.png" id="leftArrow" onclick="toInventory()">
+			<img src="../images/leftArrow.png" id="leftArrow" onclick="toInventory()">
 
 
 			<section id="recDrinkDiv">
-				<img src="images/Beer.png" id="recDrink">
+				<img src="../images/Beer.png" id="recDrink">
 				<section id="recText">
 					<h3 id="recDrinkNameSortiment"></h3>
 					<h3 id="recDrinkPriceSortiment"></h3>
@@ -65,7 +65,7 @@
 
 	<div id='eventsTab' class="tabContent">
 		<div class="whiteSpace"></div>
-		<h3 class="pageHeader">Upcoming events</h3>
+		<h3 class="pageHeader" id="upComingEvents"></h3>
 		<div class="contentDiv">
 			<div class ="events" id = "singingFarmers"></div>
 			<div class="events" id ="beerTasting"></div>
@@ -80,7 +80,7 @@
 		<div class="contentDiv">
 			<h3 class="pageHeader">The Flying Dutchman</h3>
 			<p id="aboutFlying" class="contentText"> </p>
-			<img id="logo" src="images/logo2.png">
+			<img id="logo" src="../images/logo2.png">
 		</div>
 	</div>
 

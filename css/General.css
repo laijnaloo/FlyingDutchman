@@ -1,7 +1,7 @@
 /*load new font family*/
 @font-face {
     font-family: roboto;
-    src: url(Roboto-Thin.ttf);
+    src: url(../Roboto-Thin.ttf);
 }
 
 
