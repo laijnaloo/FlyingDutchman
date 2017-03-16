@@ -3,7 +3,7 @@
 var DB_URL = "http://pub.jamaica-inn.net/fpdb/api.php"; //Database URL
 
 //Sends a XMLHttpRequest to the database url set in the variable DB_URL. The request is specified by the arguments (uname, password and action).
-//When the request is finished it will execute the function (callback) which is sent in as an argument.
+//When the request is finished it will execute the callback function which is sent in as an argument.
 function db_action(uname, password, action, callback) {
 
     var xhr = new XMLHttpRequest();
