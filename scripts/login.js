@@ -8,7 +8,7 @@ var uname;
 var password;
 var admins = ["ervtod", "jorass", "saskru", "hirchr", "svetor"]; //List of administrators in the system.
 
-//Finds and sets the username and password field to variables.
+//Finds the username and password fields in the HTML document and sets them to variables.
 function init() {
     unameField = document.getElementById("unameLoginOption");
     pwField = document.getElementById("passwordLoginOption");
