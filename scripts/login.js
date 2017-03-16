@@ -46,4 +46,4 @@ function login() {
 
 }
 
-window.addEventListener("DOMContentLoaded", init, false);
+window.addEventListener("DOMContentLoaded", init, false); //run init() when page is loaded

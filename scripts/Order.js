@@ -167,6 +167,7 @@ function changeButtonOpacity(){
     }
 }
 
+//Creates the count of individual beverage in order
 function createUserItemCount(div, count){
     var drinkCount = document.createElement("P");
     drinkCount.setAttribute("class", "userItemCount");
@@ -174,6 +175,7 @@ function createUserItemCount(div, count){
     div.appendChild(drinkCount);
 }
 
+//creates the beverage name in the order
 function createUserItemName(div, name){
     var drinkName = document.createElement("P");
     drinkName.setAttribute("class", "userItemName");
@@ -181,6 +183,7 @@ function createUserItemName(div, name){
     div.appendChild(drinkName);
 }
 
+//creates the delete button next to the product added in the order
 function createUserItemDelete(div){
     var img = document.createElement("IMG");
     img.setAttribute("class", "userItemDelete");
@@ -189,6 +192,7 @@ function createUserItemDelete(div){
     return img;
 }
 
+//Create the price pf åproduct in order
 function createUserItemPrice(div, price){
     var drinkPrice = document.createElement("P");
     drinkPrice.setAttribute("class", "userItemPrice");
