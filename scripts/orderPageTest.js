@@ -103,8 +103,6 @@ function show_beverages_price_w_button(){
 function createBuyButton(div, name, price){
     var buyButton = document.createElement("BUTTON");
     buyButton.setAttribute("class", "orderButton");
-    //buyButton.setAttribute("id","price");
-
     var lang = localStorage.getItem("language");
     if (lang == 'sv'){
         buyButton.innerHTML = "Lägg beställning"
@@ -113,7 +111,6 @@ function createBuyButton(div, name, price){
         buyButton.innerHTML = "Place Order"
 
     }
-    //buyButton.innerHTML = "Place Order"
     div.onclick = function(){
         addItemToOrder(name, price);
     };

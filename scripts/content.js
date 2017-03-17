@@ -22,23 +22,16 @@ $(document).ready(function(){
     writeData(lang);
     fade(lang);
 
-    // If the Swedish flag is clicked, then the content will be written in Swedish on the website.
+    // If the Swedish flag is clicked, then the language will be set to swedish and the page is reloaded
     $("#sv").click(function(){
-
         localStorage.setItem("language", "sv");
-        lang = localStorage.getItem("language");
-        writeData(lang);
-        setPlaceholder();
-        fade(lang);
+        window.location.reload();
     });
 
-    // If the English flag is clicked, then the content will be written in English on the website.
+    // If the English flag is clicked, then the language will be set to english and the page is reloaded
     $("#en").click(function(){
         localStorage.setItem("language", "en");
-        lang = localStorage.getItem("language");
-        writeData(lang);
-        setPlaceholder();
-        fade(lang);
+        window.location.reload();
     });
 });
 
@@ -218,11 +211,11 @@ function setPlaceholder(){
  */
 function fade(lang){
     if (lang =="en"){
-        $("#sv").fadeTo("fast", 0.20);
+        $("#sv").fadeTo("fast", 0.6 );
         $("#en").fadeTo("fast", 1);
 
     }else{
         $("#sv").fadeTo("fast", 1);
-        $("#en").fadeTo("fast", 0.20);
+        $("#en").fadeTo("fast", 0.6);
     }
 }
