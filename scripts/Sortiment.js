@@ -195,7 +195,7 @@ function sortButtonsState(buttonID){
 function init(){
     $.ajax({ //Initial fetch of beverages
         type:'GET',
-        url:'http://pub.jamaica-inn.net/fpdb/api.php?username=jorass&password=jorass&action=inventory_get',
+        url:'//pub.jamaica-inn.net/fpdb/api.php?username=jorass&password=jorass&action=inventory_get',
         dataType:'json',
         success:function (resp) {
             show_beverages_alphabetical(resp.payload);
